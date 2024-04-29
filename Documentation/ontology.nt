@@ -1,0 +1,1658 @@
+<http://www.semanticweb.org/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#GeoJson
+<http://www.w3.org/2001/XMLSchema#GeoJson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#byte
+<http://www.w3.org/2001/XMLSchema#byte> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#uuid
+<http://www.w3.org/2001/XMLSchema#uuid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/ontology#access_rights
+<http://www.semanticweb.org/ontology#access_rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#access_rights> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Iam_Service> .
+<http://www.semanticweb.org/ontology#access_rights> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Resource> .
+<http://www.semanticweb.org/ontology#access_rights> <http://www.w3.org/2000/01/rdf-schema#comment> "Access rights relevant to resource  usage, regulated by IAM Service." .
+# 
+# http://www.semanticweb.org/ontology#active_user
+<http://www.semanticweb.org/ontology#active_user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#active_user> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Transaction> .
+<http://www.semanticweb.org/ontology#active_user> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#active_user> <http://www.w3.org/2000/01/rdf-schema#comment> "individual or service accounts who have registered with DestinE Platform and utilize DestinE Platform services to access resources within a time interval" .
+# 
+# http://www.semanticweb.org/ontology#aggregates
+<http://www.semanticweb.org/ontology#aggregates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#aggregates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#MonitoringService> .
+<http://www.semanticweb.org/ontology#aggregates> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#aggregates> <http://www.w3.org/2000/01/rdf-schema#comment> "SOMD aggregates events" .
+# 
+# http://www.semanticweb.org/ontology#aggregation_of
+<http://www.semanticweb.org/ontology#aggregation_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#aggregation_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Statistics> .
+<http://www.semanticweb.org/ontology#aggregation_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#aggregation_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Events aggregated and constituting the Statistic" .
+# 
+# http://www.semanticweb.org/ontology#assigneeOf
+<http://www.semanticweb.org/ontology#assigneeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#assigneeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#assigneeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#assigneeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the Contract for which the identified Participant undertakes the assignee functional role." .
+# 
+# http://www.semanticweb.org/ontology#assignerOf
+<http://www.semanticweb.org/ontology#assignerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#assignerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#assignerOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#assignerOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the Contract for which the identified Participant undertakes the assigner functional role." .
+# 
+# http://www.semanticweb.org/ontology#authentication
+<http://www.semanticweb.org/ontology#authentication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#authentication> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Iam_Service> .
+<http://www.semanticweb.org/ontology#authentication> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#authentication> <http://www.w3.org/2000/01/rdf-schema#comment> "User authentication implemented by IAM Service" .
+# 
+# http://www.semanticweb.org/ontology#authorization
+<http://www.semanticweb.org/ontology#authorization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#authorization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Iam_Service> .
+<http://www.semanticweb.org/ontology#authorization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#authorization> <http://www.w3.org/2000/01/rdf-schema#comment> "User authorization implemented by IAM Service" .
+# 
+# http://www.semanticweb.org/ontology#calculates_kpi
+<http://www.semanticweb.org/ontology#calculates_kpi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#calculates_kpi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#MonitoringService> .
+<http://www.semanticweb.org/ontology#calculates_kpi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#calculates_kpi> <http://www.w3.org/2000/01/rdf-schema#comment> "SOMD calculates KPI from events" .
+# 
+# http://www.semanticweb.org/ontology#client_configuration
+<http://www.semanticweb.org/ontology#client_configuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#client_configuration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Iam_Service> .
+<http://www.semanticweb.org/ontology#client_configuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#client_configuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Client configuration via IAM Service" .
+# 
+# http://www.semanticweb.org/ontology#collects
+<http://www.semanticweb.org/ontology#collects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#collects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataCollection> .
+<http://www.semanticweb.org/ontology#collects> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Dataset> .
+<http://www.semanticweb.org/ontology#collects> <http://www.w3.org/2000/01/rdf-schema#comment> "Dataset collected by a Data Collection" .
+# 
+# http://www.semanticweb.org/ontology#consequence
+<http://www.semanticweb.org/ontology#consequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#consequence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Duty> .
+<http://www.semanticweb.org/ontology#consequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Duty> .
+<http://www.semanticweb.org/ontology#consequence> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Duty to another Duty, the latter being a consequence of not fulfilling the former." .
+# 
+# http://www.semanticweb.org/ontology#constituted_by
+<http://www.semanticweb.org/ontology#constituted_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#constituted_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Dataset> .
+<http://www.semanticweb.org/ontology#constituted_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#constituted_by> <http://www.w3.org/2000/01/rdf-schema#comment> "User Data constituting a Dataset" .
+# 
+# http://www.semanticweb.org/ontology#consumer
+<http://www.semanticweb.org/ontology#consumer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#consumer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#consumer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#consumer> <http://www.w3.org/2000/01/rdf-schema#comment> "Consumer of a Resource or Service that is the subject matter of the Contract. \nThis party may differ from the Assignee specified by the Contract rules." .
+# 
+# http://www.semanticweb.org/ontology#contract_offer
+<http://www.semanticweb.org/ontology#contract_offer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#contract_offer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Resource> .
+<http://www.semanticweb.org/ontology#contract_offer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#contract_offer> <http://www.w3.org/2000/01/rdf-schema#comment> "Contract Offer defining the authorized use of the Resource" .
+# 
+# http://www.semanticweb.org/ontology#creator
+<http://www.semanticweb.org/ontology#creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#creator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#creator> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity responsible for producing the resource." .
+# 
+# http://www.semanticweb.org/ontology#curator
+<http://www.semanticweb.org/ontology#curator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#curator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#CloudResource> .
+<http://www.semanticweb.org/ontology#curator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#curator> <http://www.w3.org/2000/01/rdf-schema#comment> "Participant responsible for the correctness of the content offered by the Cloud Resource." .
+# 
+# http://www.semanticweb.org/ontology#defined_Roles
+<http://www.semanticweb.org/ontology#defined_Roles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#defined_Roles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#defined_Roles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#ClientRole> .
+<http://www.semanticweb.org/ontology#defined_Roles> <http://www.w3.org/2000/01/rdf-schema#comment> "Clients can define roles that are specific to them." .
+# 
+# http://www.semanticweb.org/ontology#deployed
+<http://www.semanticweb.org/ontology#deployed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#deployed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Application> .
+<http://www.semanticweb.org/ontology#deployed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#ContainerServices> .
+<http://www.semanticweb.org/ontology#deployed> <http://www.w3.org/2000/01/rdf-schema#comment> "Deploying of an application in a dedicated Container Service" .
+# 
+# http://www.semanticweb.org/ontology#event_end
+<http://www.semanticweb.org/ontology#event_end> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#event_end> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Transaction> .
+<http://www.semanticweb.org/ontology#event_end> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#event_end> <http://www.w3.org/2000/01/rdf-schema#comment> "Transaction tracks the event end" .
+# 
+# http://www.semanticweb.org/ontology#event_start
+<http://www.semanticweb.org/ontology#event_start> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#event_start> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Transaction> .
+<http://www.semanticweb.org/ontology#event_start> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#event_start> <http://www.w3.org/2000/01/rdf-schema#comment> "Transaction tracks the event start" .
+# 
+# http://www.semanticweb.org/ontology#extracted_from_CloudResource
+<http://www.semanticweb.org/ontology#extracted_from_CloudResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#extracted_from_CloudResource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#extracted_from_CloudResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#CloudResource> .
+<http://www.semanticweb.org/ontology#extracted_from_CloudResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Event occurred and extracted from Cloud Resource" .
+# 
+# http://www.semanticweb.org/ontology#extracted_from_Runtime
+<http://www.semanticweb.org/ontology#extracted_from_Runtime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#extracted_from_Runtime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#extracted_from_Runtime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+<http://www.semanticweb.org/ontology#extracted_from_Runtime> <http://www.w3.org/2000/01/rdf-schema#comment> "Event occurred and extracted from Runtime Platform" .
+# 
+# http://www.semanticweb.org/ontology#extracted_from_Service
+<http://www.semanticweb.org/ontology#extracted_from_Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#extracted_from_Service> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#extracted_from_Service> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#extracted_from_Service> <http://www.w3.org/2000/01/rdf-schema#comment> "Event occurred and extracted from a DestinE Platform service" .
+# 
+# http://www.semanticweb.org/ontology#has_action
+<http://www.semanticweb.org/ontology#has_action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#has_action> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Rule> .
+<http://www.semanticweb.org/ontology#has_action> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#has_action> <http://www.w3.org/2000/01/rdf-schema#comment> "The operation relating to the Resource for which the Rule is being subjected." .
+# 
+# http://www.semanticweb.org/ontology#has_assignee
+<http://www.semanticweb.org/ontology#has_assignee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#has_assignee> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Rule> .
+<http://www.semanticweb.org/ontology#has_assignee> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#has_assignee> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates the Party that is the recipient the of Rule. For example, the Party being granted a Permission or required to fulfil an agreed Duty." .
+# 
+# http://www.semanticweb.org/ontology#has_assigneer
+<http://www.semanticweb.org/ontology#has_assigneer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#has_assigneer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Rule> .
+<http://www.semanticweb.org/ontology#has_assigneer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#has_assigneer> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates the Party that is issuing the Rule. For example, the Party granting a Permission or requiring an agreed Duty to be fulfilled." .
+# 
+# http://www.semanticweb.org/ontology#has_duty
+<http://www.semanticweb.org/ontology#has_duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#has_duty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Permission> .
+<http://www.semanticweb.org/ontology#has_duty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Duty> .
+<http://www.semanticweb.org/ontology#has_duty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an individual Duty to a Permission.\nNote: A Duty is a pre-condition which must be fulfilled in order to receive the Permission." .
+# 
+# http://www.semanticweb.org/ontology#has_interface
+<http://www.semanticweb.org/ontology#has_interface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#has_interface> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#has_interface> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#has_interface> <http://www.w3.org/2000/01/rdf-schema#comment> "Interfaces of a Service exposed to users" .
+# 
+# http://www.semanticweb.org/ontology#has_target
+<http://www.semanticweb.org/ontology#has_target> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#has_target> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Rule> .
+<http://www.semanticweb.org/ontology#has_target> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Resource> .
+<http://www.semanticweb.org/ontology#has_target> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject of the policy statement. It indicates that the Resource is the primary subject to which the Rule action directly applies.\nExample: the assigner Participant offers to action the target Resource" .
+# 
+# http://www.semanticweb.org/ontology#hosts
+<http://www.semanticweb.org/ontology#hosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#hosts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+<http://www.semanticweb.org/ontology#hosts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#hosts> <http://www.w3.org/2000/01/rdf-schema#comment> "Runtime Platform can host Services according to agreed integration" .
+# 
+# http://www.semanticweb.org/ontology#implies
+<http://www.semanticweb.org/ontology#implies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#implies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#implies> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#implies> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint used to refine the semantics of an Action." .
+# 
+# http://www.semanticweb.org/ontology#includedIn
+<http://www.semanticweb.org/ontology#includedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#includedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#includedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#includedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An Action asserts that another Action is not prohibited to enable its operational semantics." .
+# 
+# http://www.semanticweb.org/ontology#information_provisioning
+<http://www.semanticweb.org/ontology#information_provisioning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#information_provisioning> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Id_&_Os_Service> .
+<http://www.semanticweb.org/ontology#information_provisioning> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#information_provisioning> <http://www.w3.org/2000/01/rdf-schema#comment> "Information concerning DestinE Platform made available to users thanks to the Web Portal" .
+# 
+# http://www.semanticweb.org/ontology#issue_feedback
+<http://www.semanticweb.org/ontology#issue_feedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#issue_feedback> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#issue_feedback> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Feedback> .
+<http://www.semanticweb.org/ontology#issue_feedback> <http://www.w3.org/2000/01/rdf-schema#comment> "Feedback that a user can assign to the resolution and received support for an issue" .
+# 
+# http://www.semanticweb.org/ontology#linked_Issues
+<http://www.semanticweb.org/ontology#linked_Issues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#linked_Issues> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#linked_Issues> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#linked_Issues> <http://www.w3.org/2000/01/rdf-schema#comment> "Issue linked to an Issue." .
+# 
+# http://www.semanticweb.org/ontology#lists
+<http://www.semanticweb.org/ontology#lists> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#lists> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataPortfolio> .
+<http://www.semanticweb.org/ontology#lists> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#DataCollection> .
+<http://www.semanticweb.org/ontology#lists> <http://www.w3.org/2000/01/rdf-schema#comment> "Data Collection listed in the Data Portfolio" .
+# 
+# http://www.semanticweb.org/ontology#login
+<http://www.semanticweb.org/ontology#login> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#login> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Id_&_Os_Service> .
+<http://www.semanticweb.org/ontology#login> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#login> <http://www.w3.org/2000/01/rdf-schema#comment> "Login enabled by Web Portal" .
+# 
+# http://www.semanticweb.org/ontology#maintainer
+<http://www.semanticweb.org/ontology#maintainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#maintainer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#CloudResource> .
+<http://www.semanticweb.org/ontology#maintainer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#maintainer> <http://www.w3.org/2000/01/rdf-schema#comment> "Participant responsible for technical maintenance of the Cloud Resource" .
+# 
+# http://www.semanticweb.org/ontology#manages_client
+<http://www.semanticweb.org/ontology#manages_client> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#manages_client> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#manages_client> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#manages_client> <http://www.w3.org/2000/01/rdf-schema#comment> "Clients managed by a Service" .
+# 
+# http://www.semanticweb.org/ontology#manages_identity
+<http://www.semanticweb.org/ontology#manages_identity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#manages_identity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Iam_Service> .
+<http://www.semanticweb.org/ontology#manages_identity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#manages_identity> <http://www.w3.org/2000/01/rdf-schema#comment> "Identity management ensured by IAM Service" .
+# 
+# http://www.semanticweb.org/ontology#manages_tickets
+<http://www.semanticweb.org/ontology#manages_tickets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#manages_tickets> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceDesk> .
+<http://www.semanticweb.org/ontology#manages_tickets> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#TicketingSystem> .
+<http://www.semanticweb.org/ontology#manages_tickets> <http://www.w3.org/2000/01/rdf-schema#comment> "Service Desk manages and handle tickets" .
+# 
+# http://www.semanticweb.org/ontology#memberPerson
+<http://www.semanticweb.org/ontology#memberPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#memberPerson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#memberPerson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#memberPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "A person member of Participant" .
+# 
+# http://www.semanticweb.org/ontology#obligation
+<http://www.semanticweb.org/ontology#obligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#obligation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#obligation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Duty> .
+<http://www.semanticweb.org/ontology#obligation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an individual Duty to a Contract" .
+# 
+# http://www.semanticweb.org/ontology#organized_project
+<http://www.semanticweb.org/ontology#organized_project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#organized_project> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#TicketingSystem> .
+<http://www.semanticweb.org/ontology#organized_project> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#TicketingSystemProject> .
+<http://www.semanticweb.org/ontology#organized_project> <http://www.w3.org/2000/01/rdf-schema#comment> "specific Projects organized into the Ticketing System" .
+# 
+# http://www.semanticweb.org/ontology#participant_link
+<http://www.semanticweb.org/ontology#participant_link> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#participant_link> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceRegistry> .
+<http://www.semanticweb.org/ontology#participant_link> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#participant_link> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to integrated Participant, exposed by the Service Registry" .
+# 
+# http://www.semanticweb.org/ontology#permission
+<http://www.semanticweb.org/ontology#permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#permission> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#permission> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Permission> .
+<http://www.semanticweb.org/ontology#permission> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an individual Permission to a Contract" .
+# 
+# http://www.semanticweb.org/ontology#prohibition
+<http://www.semanticweb.org/ontology#prohibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#prohibition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#prohibition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Prohibition> .
+<http://www.semanticweb.org/ontology#prohibition> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an individual Prohibition to a Contract." .
+# 
+# http://www.semanticweb.org/ontology#provider
+<http://www.semanticweb.org/ontology#provider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#provider> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#provider> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#provider> <http://www.w3.org/2000/01/rdf-schema#comment> "Provider of a Resource or Service that is the subject matter of the contract. \n\nThis party may differ from the Assigner specified by the Contract rules." .
+# 
+# http://www.semanticweb.org/ontology#publisher
+<http://www.semanticweb.org/ontology#publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#publisher> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#publisher> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity responsible for making the resource available (which may differ from the sovereign)." .
+# 
+# http://www.semanticweb.org/ontology#records_received_transaction
+<http://www.semanticweb.org/ontology#records_received_transaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#records_received_transaction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ClearingHouse> .
+<http://www.semanticweb.org/ontology#records_received_transaction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Transaction> .
+<http://www.semanticweb.org/ontology#records_received_transaction> <http://www.w3.org/2000/01/rdf-schema#comment> "Transactions recorded in the Clearing House" .
+# 
+# http://www.semanticweb.org/ontology#remedy
+<http://www.semanticweb.org/ontology#remedy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#remedy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Prohibition> .
+<http://www.semanticweb.org/ontology#remedy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Duty> .
+<http://www.semanticweb.org/ontology#remedy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an individual remedy Duty to a Prohibition" .
+# 
+# http://www.semanticweb.org/ontology#report_of
+<http://www.semanticweb.org/ontology#report_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#report_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Report> .
+<http://www.semanticweb.org/ontology#report_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Statistics> .
+<http://www.semanticweb.org/ontology#report_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Statistics at the basis of the report" .
+# 
+# http://www.semanticweb.org/ontology#service_feedback
+<http://www.semanticweb.org/ontology#service_feedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#service_feedback> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#service_feedback> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Feedback> .
+<http://www.semanticweb.org/ontology#service_feedback> <http://www.w3.org/2000/01/rdf-schema#comment> "Feedback that a user can assign to a Service" .
+# 
+# http://www.semanticweb.org/ontology#service_link
+<http://www.semanticweb.org/ontology#service_link> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#service_link> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceRegistry> .
+<http://www.semanticweb.org/ontology#service_link> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#service_link> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the DestinE Platform service, exposed by the Service Registry" .
+# 
+# http://www.semanticweb.org/ontology#site_address
+<http://www.semanticweb.org/ontology#site_address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#site_address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#site_address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#PostalAddress> .
+<http://www.semanticweb.org/ontology#site_address> <http://www.w3.org/2000/01/rdf-schema#comment> "Address of an office or other premise at which the organization is located.\nIt is particularly important in cases in which specific rules (e.g., national law) apply, affecting, for example, the data usage control policy." .
+# 
+# http://www.semanticweb.org/ontology#sovereign
+<http://www.semanticweb.org/ontology#sovereign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#sovereign> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#sovereign> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#sovereign> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'owner', i.e. sovereign of the data." .
+# 
+# http://www.semanticweb.org/ontology#stores
+<http://www.semanticweb.org/ontology#stores> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#stores> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#MonitoringService> .
+<http://www.semanticweb.org/ontology#stores> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#stores> <http://www.w3.org/2000/01/rdf-schema#comment> "SOMD stores events" .
+# 
+# http://www.semanticweb.org/ontology#tracking_issues
+<http://www.semanticweb.org/ontology#tracking_issues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#tracking_issues> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#TicketingSystemProject> .
+<http://www.semanticweb.org/ontology#tracking_issues> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#tracking_issues> <http://www.w3.org/2000/01/rdf-schema#comment> "Issues belonging to a Ticketing System Projects" .
+# 
+# http://www.semanticweb.org/ontology#user_generated_data_provider
+<http://www.semanticweb.org/ontology#user_generated_data_provider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#user_generated_data_provider> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserGeneratedData> .
+<http://www.semanticweb.org/ontology#user_generated_data_provider> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#user_generated_data_provider> <http://www.w3.org/2000/01/rdf-schema#comment> "provider of additional generated data" .
+# 
+# http://www.semanticweb.org/ontology#uses_Compute
+<http://www.semanticweb.org/ontology#uses_Compute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#uses_Compute> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+<http://www.semanticweb.org/ontology#uses_Compute> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#ComputingInstances> .
+<http://www.semanticweb.org/ontology#uses_Compute> <http://www.w3.org/2000/01/rdf-schema#comment> "Computing instancing used by the Runtime Platform" .
+# 
+# http://www.semanticweb.org/ontology#uses_Network
+<http://www.semanticweb.org/ontology#uses_Network> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#uses_Network> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+<http://www.semanticweb.org/ontology#uses_Network> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#NetworkServices> .
+<http://www.semanticweb.org/ontology#uses_Network> <http://www.w3.org/2000/01/rdf-schema#comment> "Network Services used by the Runtime Platform" .
+# 
+# http://www.semanticweb.org/ontology#uses_Storage
+<http://www.semanticweb.org/ontology#uses_Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontology#uses_Storage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+<http://www.semanticweb.org/ontology#uses_Storage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontology#Storage> .
+<http://www.semanticweb.org/ontology#uses_Storage> <http://www.w3.org/2000/01/rdf-schema#comment> "Storage used by the Runtime Platform" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/ontology#Access_Policy_Description
+<http://www.semanticweb.org/ontology#Access_Policy_Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Access_Policy_Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Access_Policy_Description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Access_Policy_Description> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of request restrictions applied to Users. Example: “Service will be not available for Federated Users”"@en .
+# 
+# http://www.semanticweb.org/ontology#ActionPerformer
+<http://www.semanticweb.org/ontology#ActionPerformer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#ActionPerformer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#ActionPerformer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#ActionPerformer> <http://www.w3.org/2000/01/rdf-schema#comment> "Participant performer of the Action" .
+# 
+# http://www.semanticweb.org/ontology#ActionStatus
+<http://www.semanticweb.org/ontology#ActionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#ActionStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#ActionStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#ActionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the current disposition of the Action.\nIn-progress, completed, failed, potential." .
+# 
+# http://www.semanticweb.org/ontology#Action_Identifier
+<http://www.semanticweb.org/ontology#Action_Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Action_Identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#Action_Identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Action_Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of the Action" .
+# 
+# http://www.semanticweb.org/ontology#Active_Security_Policy
+<http://www.semanticweb.org/ontology#Active_Security_Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Active_Security_Policy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+<http://www.semanticweb.org/ontology#Active_Security_Policy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/ontology#Active_Security_Policy> <http://www.w3.org/2000/01/rdf-schema#comment> "Flag relevant to security policy" .
+# 
+# http://www.semanticweb.org/ontology#Application_functionality
+<http://www.semanticweb.org/ontology#Application_functionality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Application_functionality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Application> .
+<http://www.semanticweb.org/ontology#Application_functionality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Application_functionality> <http://www.w3.org/2000/01/rdf-schema#comment> "Function(s) implemented by the application" .
+# 
+# http://www.semanticweb.org/ontology#Application_version
+<http://www.semanticweb.org/ontology#Application_version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Application_version> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Application> .
+<http://www.semanticweb.org/ontology#Application_version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Application_version> <http://www.w3.org/2000/01/rdf-schema#comment> "Version of the application" .
+# 
+# http://www.semanticweb.org/ontology#Approved
+<http://www.semanticweb.org/ontology#Approved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Approved> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Feedback> .
+<http://www.semanticweb.org/ontology#Approved> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/ontology#Approved> <http://www.w3.org/2000/01/rdf-schema#comment> "Flag stating if the feedback has been approved or not" .
+# 
+# http://www.semanticweb.org/ontology#Attachment
+<http://www.semanticweb.org/ontology#Attachment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Attachment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Attachment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#byte> .
+<http://www.semanticweb.org/ontology#Attachment> <http://www.w3.org/2000/01/rdf-schema#comment> "Files and screenshots that clarify the issue description" .
+# 
+# http://www.semanticweb.org/ontology#Base_Url
+<http://www.semanticweb.org/ontology#Base_Url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Base_Url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#Base_Url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Base_Url> <http://www.w3.org/2000/01/rdf-schema#comment> "default URL to use when the auth server needs to redirect or link back to the client" .
+# 
+# http://www.semanticweb.org/ontology#City
+<http://www.semanticweb.org/ontology#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#City> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#PostalAddress> .
+<http://www.semanticweb.org/ontology#City> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#City> <http://www.w3.org/2000/01/rdf-schema#comment> "City name" .
+# 
+# http://www.semanticweb.org/ontology#Client_Description
+<http://www.semanticweb.org/ontology#Client_Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Client_Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#Client_Description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Client_Description> <http://www.w3.org/2000/01/rdf-schema#comment> "specifies description of the Client" .
+# 
+# http://www.semanticweb.org/ontology#Client_Id
+<http://www.semanticweb.org/ontology#Client_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Client_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#Client_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Client_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "specifies ID referenced in URI and tokens" .
+# 
+# http://www.semanticweb.org/ontology#Client_Name
+<http://www.semanticweb.org/ontology#Client_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Client_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#Client_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Client_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "specifies displayed name of the Client" .
+# 
+# http://www.semanticweb.org/ontology#Client_Protocol
+<http://www.semanticweb.org/ontology#Client_Protocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Client_Protocol> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#Client_Protocol> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Client_Protocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Selected authentication standard protocol" .
+# 
+# http://www.semanticweb.org/ontology#Client_Type
+<http://www.semanticweb.org/ontology#Client_Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Client_Type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#Client_Type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Client_Type> <http://www.w3.org/2000/01/rdf-schema#comment> "Client type: public, confidential.\n'Confidential' client requires a secret to initiate login protocol. 'Public' clients do not require a secret." .
+# 
+# http://www.semanticweb.org/ontology#Cloud_Resource_Id
+<http://www.semanticweb.org/ontology#Cloud_Resource_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Cloud_Resource_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#CloudResource> .
+<http://www.semanticweb.org/ontology#Cloud_Resource_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Cloud_Resource_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the Cloud Resource" .
+# 
+# http://www.semanticweb.org/ontology#Cloud_Resource_type
+<http://www.semanticweb.org/ontology#Cloud_Resource_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Cloud_Resource_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#CloudResource> .
+<http://www.semanticweb.org/ontology#Cloud_Resource_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Cloud_Resource_type> <http://www.w3.org/2000/01/rdf-schema#comment> "IaaS, PaaS, CaaS, SaaS" .
+# 
+# http://www.semanticweb.org/ontology#Collection_Description
+<http://www.semanticweb.org/ontology#Collection_Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Collection_Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataCollection> .
+<http://www.semanticweb.org/ontology#Collection_Description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Collection_Description> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the Collection" .
+# 
+# http://www.semanticweb.org/ontology#Collection_Id
+<http://www.semanticweb.org/ontology#Collection_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Collection_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataCollection> .
+<http://www.semanticweb.org/ontology#Collection_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#uuid> .
+<http://www.semanticweb.org/ontology#Collection_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of the dataset" .
+# 
+# http://www.semanticweb.org/ontology#Collection_ModificationDate
+<http://www.semanticweb.org/ontology#Collection_ModificationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Collection_ModificationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataCollection> .
+<http://www.semanticweb.org/ontology#Collection_ModificationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/ontology#Collection_ModificationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Most recent date on which the Collection was changed, updated or modified." .
+# 
+# http://www.semanticweb.org/ontology#Collection_PublicationDate
+<http://www.semanticweb.org/ontology#Collection_PublicationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Collection_PublicationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataCollection> .
+<http://www.semanticweb.org/ontology#Collection_PublicationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/ontology#Collection_PublicationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of formal issuance (e.g., publication) of the Collection." .
+# 
+# http://www.semanticweb.org/ontology#Components
+<http://www.semanticweb.org/ontology#Components> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Components> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Components> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Components> <http://www.w3.org/2000/01/rdf-schema#comment> "software component involved in the problem" .
+# 
+# http://www.semanticweb.org/ontology#Components_Version
+<http://www.semanticweb.org/ontology#Components_Version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Components_Version> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Components_Version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/ontology#Components_Version> <http://www.w3.org/2000/01/rdf-schema#comment> "software version of the component involved in the problem" .
+# 
+# http://www.semanticweb.org/ontology#Computing_Instance_Private_Network_description
+<http://www.semanticweb.org/ontology#Computing_Instance_Private_Network_description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Computing_Instance_Private_Network_description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ComputingInstances> .
+<http://www.semanticweb.org/ontology#Computing_Instance_Private_Network_description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Computing_Instance_Private_Network_description> <http://www.w3.org/2000/01/rdf-schema#comment> "Private Network description of the computing instance" .
+# 
+# http://www.semanticweb.org/ontology#Computing_Instance_Public_Network_description
+<http://www.semanticweb.org/ontology#Computing_Instance_Public_Network_description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Computing_Instance_Public_Network_description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ComputingInstances> .
+<http://www.semanticweb.org/ontology#Computing_Instance_Public_Network_description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Computing_Instance_Public_Network_description> <http://www.w3.org/2000/01/rdf-schema#comment> "Public Network description of the computing instance" .
+# 
+# http://www.semanticweb.org/ontology#Computing_Instance__Memory
+<http://www.semanticweb.org/ontology#Computing_Instance__Memory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Computing_Instance__Memory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ComputingInstances> .
+<http://www.semanticweb.org/ontology#Computing_Instance__Memory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Computing_Instance__Memory> <http://www.w3.org/2000/01/rdf-schema#comment> "Memory of the computing instance" .
+# 
+# http://www.semanticweb.org/ontology#Computing_Instance__Storage
+<http://www.semanticweb.org/ontology#Computing_Instance__Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Computing_Instance__Storage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ComputingInstances> .
+<http://www.semanticweb.org/ontology#Computing_Instance__Storage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Computing_Instance__Storage> <http://www.w3.org/2000/01/rdf-schema#comment> "Storage of the computing instance" .
+# 
+# http://www.semanticweb.org/ontology#Computing_Instance__vcore
+<http://www.semanticweb.org/ontology#Computing_Instance__vcore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Computing_Instance__vcore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ComputingInstances> .
+<http://www.semanticweb.org/ontology#Computing_Instance__vcore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Computing_Instance__vcore> <http://www.w3.org/2000/01/rdf-schema#comment> "Core of the computing instance" .
+# 
+# http://www.semanticweb.org/ontology#Computing_Instance_name
+<http://www.semanticweb.org/ontology#Computing_Instance_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Computing_Instance_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ComputingInstances> .
+<http://www.semanticweb.org/ontology#Computing_Instance_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Computing_Instance_name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the computing instance" .
+# 
+# http://www.semanticweb.org/ontology#Conforms_To
+<http://www.semanticweb.org/ontology#Conforms_To> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Conforms_To> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#Conforms_To> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Conforms_To> <http://www.w3.org/2000/01/rdf-schema#comment> "An established standard to which the described item conforms."@en .
+# 
+# http://www.semanticweb.org/ontology#Container_Description
+<http://www.semanticweb.org/ontology#Container_Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Container_Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ContainerServices> .
+<http://www.semanticweb.org/ontology#Container_Description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Container_Description> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the container" .
+# 
+# http://www.semanticweb.org/ontology#Container_Id
+<http://www.semanticweb.org/ontology#Container_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Container_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ContainerServices> .
+<http://www.semanticweb.org/ontology#Container_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Container_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "ID of the container" .
+# 
+# http://www.semanticweb.org/ontology#Content_provenance
+<http://www.semanticweb.org/ontology#Content_provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Content_provenance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#Content_provenance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Content_provenance> <http://www.w3.org/2000/01/rdf-schema#comment> "Origin of the Content"@en .
+# 
+# http://www.semanticweb.org/ontology#Contract_Identifier
+<http://www.semanticweb.org/ontology#Contract_Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Contract_Identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#Contract_Identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Contract_Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Unambiguous identifier to identify the Contract" .
+# 
+# http://www.semanticweb.org/ontology#Contract_Offer_Ref
+<http://www.semanticweb.org/ontology#Contract_Offer_Ref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Contract_Offer_Ref> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#Contract_Offer_Ref> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Contract_Offer_Ref> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference to a Contract Offer defining the authorized use of the Resource."@en .
+# 
+# http://www.semanticweb.org/ontology#Contract_date
+<http://www.semanticweb.org/ontology#Contract_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Contract_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#Contract_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/ontology#Contract_date> <http://www.w3.org/2000/01/rdf-schema#comment> "Absolute datetime of signing the Contract" .
+# 
+# http://www.semanticweb.org/ontology#Contract_end
+<http://www.semanticweb.org/ontology#Contract_end> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Contract_end> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#Contract_end> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/ontology#Contract_end> <http://www.w3.org/2000/01/rdf-schema#comment> "Absolute datetime the Contract is requested, offered or expected to end. If omitted, the contract has to be explicitly terminated by any of the parties." .
+# 
+# http://www.semanticweb.org/ontology#Contract_start
+<http://www.semanticweb.org/ontology#Contract_start> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Contract_start> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Contract> .
+<http://www.semanticweb.org/ontology#Contract_start> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/ontology#Contract_start> <http://www.w3.org/2000/01/rdf-schema#comment> "Absolute datetime the Contract is requested, offered or expected to start, depending on the type of Contract." .
+# 
+# http://www.semanticweb.org/ontology#CorporateEmailAddress
+<http://www.semanticweb.org/ontology#CorporateEmailAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#CorporateEmailAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#CorporateEmailAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#CorporateEmailAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Email Address of the Participant" .
+# 
+# http://www.semanticweb.org/ontology#CorporateHomepage
+<http://www.semanticweb.org/ontology#CorporateHomepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#CorporateHomepage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#CorporateHomepage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#CorporateHomepage> <http://www.w3.org/2000/01/rdf-schema#comment> "Homepage of the Participant" .
+# 
+# http://www.semanticweb.org/ontology#Country
+<http://www.semanticweb.org/ontology#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#PostalAddress> .
+<http://www.semanticweb.org/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "Country" .
+# 
+# http://www.semanticweb.org/ontology#Data_Portfolio_Document
+<http://www.semanticweb.org/ontology#Data_Portfolio_Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Data_Portfolio_Document> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataPortfolio> .
+<http://www.semanticweb.org/ontology#Data_Portfolio_Document> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Data_Portfolio_Document> <http://www.w3.org/2000/01/rdf-schema#comment> "document describing the Portfolio." .
+# 
+# http://www.semanticweb.org/ontology#Data_Resource_Id
+<http://www.semanticweb.org/ontology#Data_Resource_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Data_Resource_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#Data_Resource_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Data_Resource_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique identifier of data resource" .
+# 
+# http://www.semanticweb.org/ontology#Data_Resource_Name
+<http://www.semanticweb.org/ontology#Data_Resource_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Data_Resource_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#Data_Resource_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Data_Resource_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "A name given to the data resource"@en .
+# 
+# http://www.semanticweb.org/ontology#Data_resource_version
+<http://www.semanticweb.org/ontology#Data_resource_version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Data_resource_version> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#Data_resource_version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Data_resource_version> <http://www.w3.org/2000/01/rdf-schema#comment> "Version of the data resource"@en .
+# 
+# http://www.semanticweb.org/ontology#Dataset_Description
+<http://www.semanticweb.org/ontology#Dataset_Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Dataset_Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Dataset> .
+<http://www.semanticweb.org/ontology#Dataset_Description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Dataset_Description> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the Dataset" .
+# 
+# http://www.semanticweb.org/ontology#Dataset_Id
+<http://www.semanticweb.org/ontology#Dataset_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Dataset_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Dataset> .
+<http://www.semanticweb.org/ontology#Dataset_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#uuid> .
+<http://www.semanticweb.org/ontology#Dataset_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of the dataset" .
+# 
+# http://www.semanticweb.org/ontology#Dataset_Id_of_product
+<http://www.semanticweb.org/ontology#Dataset_Id_of_product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Dataset_Id_of_product> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#Dataset_Id_of_product> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#uuid> .
+<http://www.semanticweb.org/ontology#Dataset_Id_of_product> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of the dataset to which user datum belongs to"@en .
+# 
+# http://www.semanticweb.org/ontology#Dataset_Name
+<http://www.semanticweb.org/ontology#Dataset_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Dataset_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Dataset> .
+<http://www.semanticweb.org/ontology#Dataset_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Dataset_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the dataset" .
+# 
+# http://www.semanticweb.org/ontology#Dataset_Name_of_product
+<http://www.semanticweb.org/ontology#Dataset_Name_of_product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Dataset_Name_of_product> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#Dataset_Name_of_product> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Dataset_Name_of_product> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of dataset to which the user datum belongs"@en .
+# 
+# http://www.semanticweb.org/ontology#Dataset_Source
+<http://www.semanticweb.org/ontology#Dataset_Source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Dataset_Source> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#Dataset_Source> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Dataset_Source> <http://www.w3.org/2000/01/rdf-schema#comment> "Dataset source of the user datum"@en .
+# 
+# http://www.semanticweb.org/ontology#Delivery_address
+<http://www.semanticweb.org/ontology#Delivery_address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Delivery_address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#PostalAddress> .
+<http://www.semanticweb.org/ontology#Delivery_address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Delivery_address> <http://www.w3.org/2000/01/rdf-schema#comment> "building/apartment/suite number and the street name" .
+# 
+# http://www.semanticweb.org/ontology#Deployment_option
+<http://www.semanticweb.org/ontology#Deployment_option> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Deployment_option> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Application> .
+<http://www.semanticweb.org/ontology#Deployment_option> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Deployment_option> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of relevant deployment" .
+# 
+# http://www.semanticweb.org/ontology#DestinE_Platform_User_Type
+<http://www.semanticweb.org/ontology#DestinE_Platform_User_Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#DestinE_Platform_User_Type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#DestinE_Platform_User_Type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#DestinE_Platform_User_Type> <http://www.w3.org/2000/01/rdf-schema#comment> "Standard User, Service Provider, Administrator, Federated User" .
+# 
+# http://www.semanticweb.org/ontology#Documentation_Uri
+<http://www.semanticweb.org/ontology#Documentation_Uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Documentation_Uri> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Documentation_Uri> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Documentation_Uri> <http://www.w3.org/2000/01/rdf-schema#comment> "available documentation after onboarding"@en .
+# 
+# http://www.semanticweb.org/ontology#Encrypted
+<http://www.semanticweb.org/ontology#Encrypted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Encrypted> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Storage> .
+<http://www.semanticweb.org/ontology#Encrypted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/ontology#Encrypted> <http://www.w3.org/2000/01/rdf-schema#comment> "Flag relevant to the encryption of the storage" .
+# 
+# http://www.semanticweb.org/ontology#Encrypted_Password
+<http://www.semanticweb.org/ontology#Encrypted_Password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Encrypted_Password> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#Encrypted_Password> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Encrypted_Password> <http://www.w3.org/2000/01/rdf-schema#comment> "Hashed password chosen by a Person" .
+# 
+# http://www.semanticweb.org/ontology#EndTime
+<http://www.semanticweb.org/ontology#EndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#EndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#EndTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/ontology#EndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The end time of an action." .
+# 
+# http://www.semanticweb.org/ontology#Error
+<http://www.semanticweb.org/ontology#Error> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Error> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#Error> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Error> <http://www.w3.org/2000/01/rdf-schema#comment> "Descriptive information on the cause of the failure (optional, for failed actions)" .
+# 
+# http://www.semanticweb.org/ontology#Event_Type
+<http://www.semanticweb.org/ontology#Event_Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Event_Type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#Event_Type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Event_Type> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of Event" .
+# 
+# http://www.semanticweb.org/ontology#Event_service_Id
+<http://www.semanticweb.org/ontology#Event_service_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Event_service_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#Event_service_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Event_service_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of the DestinE Platform Service where the event occurred" .
+# 
+# http://www.semanticweb.org/ontology#Event_timestamp
+<http://www.semanticweb.org/ontology#Event_timestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Event_timestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Event> .
+<http://www.semanticweb.org/ontology#Event_timestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/ontology#Event_timestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "returns the time at which the event was created." .
+# 
+# http://www.semanticweb.org/ontology#Existing_Documentation
+<http://www.semanticweb.org/ontology#Existing_Documentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Existing_Documentation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Existing_Documentation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Existing_Documentation> <http://www.w3.org/2000/01/rdf-schema#comment> "link/upload"@en .
+# 
+# http://www.semanticweb.org/ontology#Existing_Material
+<http://www.semanticweb.org/ontology#Existing_Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Existing_Material> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Existing_Material> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Existing_Material> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance/Demo/Video (link)"@en .
+# 
+# http://www.semanticweb.org/ontology#Feedback_Comment
+<http://www.semanticweb.org/ontology#Feedback_Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Feedback_Comment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Feedback> .
+<http://www.semanticweb.org/ontology#Feedback_Comment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Feedback_Comment> <http://www.w3.org/2000/01/rdf-schema#comment> "Possible comment of the user when assigning a rate" .
+# 
+# http://www.semanticweb.org/ontology#Format
+<http://www.semanticweb.org/ontology#Format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Format> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#Format> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Format> <http://www.w3.org/2000/01/rdf-schema#comment> "Data resource format"@en .
+# 
+# http://www.semanticweb.org/ontology#Geometry
+<http://www.semanticweb.org/ontology#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Geometry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#Geometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#GeoJson> .
+<http://www.semanticweb.org/ontology#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Geometry"@en .
+# 
+# http://www.semanticweb.org/ontology#Hardened
+<http://www.semanticweb.org/ontology#Hardened> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Hardened> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ComputingInstances> .
+<http://www.semanticweb.org/ontology#Hardened> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/ontology#Hardened> <http://www.w3.org/2000/01/rdf-schema#comment> "Flag relevant to hardening process of securing a system by reducing its surface of vulnerability" .
+# 
+# http://www.semanticweb.org/ontology#Hpc_Id
+<http://www.semanticweb.org/ontology#Hpc_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Hpc_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Hpc> .
+<http://www.semanticweb.org/ontology#Hpc_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Hpc_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "HPC Identifier" .
+# 
+# http://www.semanticweb.org/ontology#Integrations
+<http://www.semanticweb.org/ontology#Integrations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Integrations> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Integrations> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Integrations> <http://www.w3.org/2000/01/rdf-schema#comment> "list of integrations with Platform Services"@en .
+# 
+# http://www.semanticweb.org/ontology#Interface_Type
+<http://www.semanticweb.org/ontology#Interface_Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Interface_Type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Interface_Type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Interface_Type> <http://www.w3.org/2000/01/rdf-schema#comment> "Endpoint archetype (example: GUI, API, etc)"@en .
+# 
+# http://www.semanticweb.org/ontology#Interface_Uri
+<http://www.semanticweb.org/ontology#Interface_Uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Interface_Uri> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Interface_Uri> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Interface_Uri> <http://www.w3.org/2000/01/rdf-schema#comment> "Http link to Interface root path, Depending on Service Provider Infrastructure Integration (runtime/on-premise)"@en .
+# 
+# http://www.semanticweb.org/ontology#Issue_Assignee
+<http://www.semanticweb.org/ontology#Issue_Assignee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Issue_Assignee> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Issue_Assignee> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Issue_Assignee> <http://www.w3.org/2000/01/rdf-schema#comment> "person who has the responsibility to resolve the issue, or the person who needs to take the next action." .
+# 
+# http://www.semanticweb.org/ontology#Issue_Creation_Date
+<http://www.semanticweb.org/ontology#Issue_Creation_Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Issue_Creation_Date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Issue_Creation_Date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/ontology#Issue_Creation_Date> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates the date of the event and it is automatically filled by Jira system corresponding to the date in which the issue is opened" .
+# 
+# http://www.semanticweb.org/ontology#Issue_Description
+<http://www.semanticweb.org/ontology#Issue_Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Issue_Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Issue_Description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Issue_Description> <http://www.w3.org/2000/01/rdf-schema#comment> "Problem description" .
+# 
+# http://www.semanticweb.org/ontology#Issue_Relevance
+<http://www.semanticweb.org/ontology#Issue_Relevance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Issue_Relevance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Issue_Relevance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Issue_Relevance> <http://www.w3.org/2000/01/rdf-schema#comment> "Routine, Outstanding. The value in this field represents the urgency of resolution from a user prospectiv" .
+# 
+# http://www.semanticweb.org/ontology#Issue_Reporter
+<http://www.semanticweb.org/ontology#Issue_Reporter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Issue_Reporter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Issue_Reporter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Issue_Reporter> <http://www.w3.org/2000/01/rdf-schema#comment> "person who raises issue" .
+# 
+# http://www.semanticweb.org/ontology#Issue_type
+<http://www.semanticweb.org/ontology#Issue_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Issue_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Issue_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Issue_type> <http://www.w3.org/2000/01/rdf-schema#comment> "Anomaly; User Request; Operational Anomaly; Story; SPR; Maintenance Request; Security Incident; Change Request." .
+# 
+# http://www.semanticweb.org/ontology#Keywords
+<http://www.semanticweb.org/ontology#Keywords> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Keywords> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Keywords> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Keywords> <http://www.w3.org/2000/01/rdf-schema#comment> "Service Provider to describe the Service"@en .
+# 
+# http://www.semanticweb.org/ontology#Kpi_Id
+<http://www.semanticweb.org/ontology#Kpi_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Kpi_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Kpi> .
+<http://www.semanticweb.org/ontology#Kpi_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Kpi_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the KPI" .
+# 
+# http://www.semanticweb.org/ontology#Kpi_service_Id
+<http://www.semanticweb.org/ontology#Kpi_service_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Kpi_service_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Kpi> .
+<http://www.semanticweb.org/ontology#Kpi_service_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#uuid> .
+<http://www.semanticweb.org/ontology#Kpi_service_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of the DestinE Platform service on which the KPI was measured" .
+# 
+# http://www.semanticweb.org/ontology#Kpi_type
+<http://www.semanticweb.org/ontology#Kpi_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Kpi_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Kpi> .
+<http://www.semanticweb.org/ontology#Kpi_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Kpi_type> <http://www.w3.org/2000/01/rdf-schema#comment> "KPI type" .
+# 
+# http://www.semanticweb.org/ontology#Language
+<http://www.semanticweb.org/ontology#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#comment> "Language of the item"@en .
+# 
+# http://www.semanticweb.org/ontology#LegalName
+<http://www.semanticweb.org/ontology#LegalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#LegalName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#LegalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#LegalName> <http://www.w3.org/2000/01/rdf-schema#comment> "The complete legal name of a Participant. Unlike the title property for the participant which refers to the commonly used name or term for the Participant, a legal name identifies a participant for legal, administrative and other official purposes." .
+# 
+# http://www.semanticweb.org/ontology#License
+<http://www.semanticweb.org/ontology#License> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#License> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#License> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#License> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference to a legal document under which the resource is made available"@en .
+# 
+# http://www.semanticweb.org/ontology#Main_contact_address
+<http://www.semanticweb.org/ontology#Main_contact_address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Main_contact_address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Main_contact_address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Main_contact_address> <http://www.w3.org/2000/01/rdf-schema#comment> "Contact email for information requests about the Service"@en .
+# 
+# http://www.semanticweb.org/ontology#Network_Service_Name
+<http://www.semanticweb.org/ontology#Network_Service_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Network_Service_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#NetworkServices> .
+<http://www.semanticweb.org/ontology#Network_Service_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Network_Service_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the network service" .
+# 
+# http://www.semanticweb.org/ontology#Orchestrator_Engine
+<http://www.semanticweb.org/ontology#Orchestrator_Engine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Orchestrator_Engine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+<http://www.semanticweb.org/ontology#Orchestrator_Engine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Orchestrator_Engine> <http://www.w3.org/2000/01/rdf-schema#comment> "Engine orchestrator description" .
+# 
+# http://www.semanticweb.org/ontology#Orchestrator_Ip
+<http://www.semanticweb.org/ontology#Orchestrator_Ip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Orchestrator_Ip> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+<http://www.semanticweb.org/ontology#Orchestrator_Ip> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Orchestrator_Ip> <http://www.w3.org/2000/01/rdf-schema#comment> "Orchestrator IP" .
+# 
+# http://www.semanticweb.org/ontology#Orchestrator_Name
+<http://www.semanticweb.org/ontology#Orchestrator_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Orchestrator_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+<http://www.semanticweb.org/ontology#Orchestrator_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Orchestrator_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the orchestrator" .
+# 
+# http://www.semanticweb.org/ontology#Orchestrator_System
+<http://www.semanticweb.org/ontology#Orchestrator_System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Orchestrator_System> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+<http://www.semanticweb.org/ontology#Orchestrator_System> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Orchestrator_System> <http://www.w3.org/2000/01/rdf-schema#comment> "Orchestrator system" .
+# 
+# http://www.semanticweb.org/ontology#Organization
+<http://www.semanticweb.org/ontology#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Organization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#Organization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization that this person is affiliated with." .
+# 
+# http://www.semanticweb.org/ontology#Organization_name
+<http://www.semanticweb.org/ontology#Organization_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Organization_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Organization_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Organization_name> <http://www.w3.org/2000/01/rdf-schema#comment> "Service Provider organization name"@en .
+# 
+# http://www.semanticweb.org/ontology#Organization_type
+<http://www.semanticweb.org/ontology#Organization_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Organization_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Organization_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Organization_type> <http://www.w3.org/2000/01/rdf-schema#comment> "Service provider organization type (Industry, Research Institute, Public Organization, Scientific Organization)"@en .
+# 
+# http://www.semanticweb.org/ontology#Original_Estimation
+<http://www.semanticweb.org/ontology#Original_Estimation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Original_Estimation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Original_Estimation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Original_Estimation> <http://www.w3.org/2000/01/rdf-schema#comment> "an estimated date for the issue resolution or to mitigate the negative consequence" .
+# 
+# http://www.semanticweb.org/ontology#Participant_Id
+<http://www.semanticweb.org/ontology#Participant_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Participant_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Participant> .
+<http://www.semanticweb.org/ontology#Participant_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#uuid> .
+<http://www.semanticweb.org/ontology#Participant_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Participant unique identifier" .
+# 
+# http://www.semanticweb.org/ontology#Participant_provenance
+<http://www.semanticweb.org/ontology#Participant_provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Participant_provenance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#Participant_provenance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Participant_provenance> <http://www.w3.org/2000/01/rdf-schema#comment> "Participants that are responsible of trace the Content Provenance"@en .
+# 
+# http://www.semanticweb.org/ontology#Person_Id
+<http://www.semanticweb.org/ontology#Person_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Person_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#Person_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#uuid> .
+<http://www.semanticweb.org/ontology#Person_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Person unique identifier" .
+# 
+# http://www.semanticweb.org/ontology#Person_Name
+<http://www.semanticweb.org/ontology#Person_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Person_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#Person_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Person_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the Person" .
+# 
+# http://www.semanticweb.org/ontology#Person_Surname
+<http://www.semanticweb.org/ontology#Person_Surname> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Person_Surname> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#Person_Surname> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Person_Surname> <http://www.w3.org/2000/01/rdf-schema#comment> "Surname of the Person" .
+# 
+# http://www.semanticweb.org/ontology#Person_Username
+<http://www.semanticweb.org/ontology#Person_Username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Person_Username> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Person> .
+<http://www.semanticweb.org/ontology#Person_Username> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Person_Username> <http://www.w3.org/2000/01/rdf-schema#comment> "Username of the Person" .
+# 
+# http://www.semanticweb.org/ontology#Policy_of_Service_Url
+<http://www.semanticweb.org/ontology#Policy_of_Service_Url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Policy_of_Service_Url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#Policy_of_Service_Url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Policy_of_Service_Url> <http://www.w3.org/2000/01/rdf-schema#comment> "URL that the Service Client provides to end-users to read about the how the profile data will be used" .
+# 
+# http://www.semanticweb.org/ontology#Postal_Code
+<http://www.semanticweb.org/ontology#Postal_Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Postal_Code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#PostalAddress> .
+<http://www.semanticweb.org/ontology#Postal_Code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Postal_Code> <http://www.w3.org/2000/01/rdf-schema#comment> "ZIP code" .
+# 
+# http://www.semanticweb.org/ontology#Priority
+<http://www.semanticweb.org/ontology#Priority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Priority> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Priority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Priority> <http://www.w3.org/2000/01/rdf-schema#comment> "Blocking; Critical; Normal" .
+# 
+# http://www.semanticweb.org/ontology#Product_Id
+<http://www.semanticweb.org/ontology#Product_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Product_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#Product_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#uuid> .
+<http://www.semanticweb.org/ontology#Product_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of a user datum"@en .
+# 
+# http://www.semanticweb.org/ontology#Product_Name
+<http://www.semanticweb.org/ontology#Product_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Product_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#Product_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Product_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the user datum"@en .
+# 
+# http://www.semanticweb.org/ontology#Province
+<http://www.semanticweb.org/ontology#Province> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Province> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#PostalAddress> .
+<http://www.semanticweb.org/ontology#Province> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Province> <http://www.w3.org/2000/01/rdf-schema#comment> "Province, i.e., specific location within a country" .
+# 
+# http://www.semanticweb.org/ontology#Public_statistics
+<http://www.semanticweb.org/ontology#Public_statistics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Public_statistics> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Statistics> .
+<http://www.semanticweb.org/ontology#Public_statistics> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/ontology#Public_statistics> <http://www.w3.org/2000/01/rdf-schema#comment> "Flag stating if the statistic is publicly exposed to users" .
+# 
+# http://www.semanticweb.org/ontology#PublicationDate
+<http://www.semanticweb.org/ontology#PublicationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#PublicationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#PublicationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#PublicationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of formal issuance (e.g., publication) of the user datum."@en .
+# 
+# http://www.semanticweb.org/ontology#Rating
+<http://www.semanticweb.org/ontology#Rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Rating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Feedback> .
+<http://www.semanticweb.org/ontology#Rating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/ontology#Rating> <http://www.w3.org/2000/01/rdf-schema#comment> "Vote from 1 to 5" .
+# 
+# http://www.semanticweb.org/ontology#Replicas_Number
+<http://www.semanticweb.org/ontology#Replicas_Number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Replicas_Number> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ContainerServices> .
+<http://www.semanticweb.org/ontology#Replicas_Number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/ontology#Replicas_Number> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of identical instances" .
+# 
+# http://www.semanticweb.org/ontology#Report_Id
+<http://www.semanticweb.org/ontology#Report_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Report_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Report> .
+<http://www.semanticweb.org/ontology#Report_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Report_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the report" .
+# 
+# http://www.semanticweb.org/ontology#Report_of_Event_type
+<http://www.semanticweb.org/ontology#Report_of_Event_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Report_of_Event_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Report> .
+<http://www.semanticweb.org/ontology#Report_of_Event_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Report_of_Event_type> <http://www.w3.org/2000/01/rdf-schema#comment> "Report relevant to a specific event type" .
+# 
+# http://www.semanticweb.org/ontology#Report_service_Id
+<http://www.semanticweb.org/ontology#Report_service_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Report_service_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Report> .
+<http://www.semanticweb.org/ontology#Report_service_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#uuid> .
+<http://www.semanticweb.org/ontology#Report_service_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of the DestinE Platform service relevant to the statistics at the basis of the report" .
+# 
+# http://www.semanticweb.org/ontology#Resource_Id
+<http://www.semanticweb.org/ontology#Resource_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Resource_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Resource> .
+<http://www.semanticweb.org/ontology#Resource_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Resource_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of a resource"@en .
+# 
+# http://www.semanticweb.org/ontology#Revision_Date
+<http://www.semanticweb.org/ontology#Revision_Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Revision_Date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Revision_Date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/ontology#Revision_Date> <http://www.w3.org/2000/01/rdf-schema#comment> "Board Approval date of the Onboarding or Service Update"@en .
+# 
+# http://www.semanticweb.org/ontology#Role_Description
+<http://www.semanticweb.org/ontology#Role_Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Role_Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ClientRole> .
+<http://www.semanticweb.org/ontology#Role_Description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Role_Description> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the client role" .
+# 
+# http://www.semanticweb.org/ontology#Role_Name
+<http://www.semanticweb.org/ontology#Role_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Role_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ClientRole> .
+<http://www.semanticweb.org/ontology#Role_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Role_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name identifying the client role" .
+# 
+# http://www.semanticweb.org/ontology#Service_Description
+<http://www.semanticweb.org/ontology#Service_Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Service_Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Service_Description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Service_Description> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of Service functions and goals."@en .
+# 
+# http://www.semanticweb.org/ontology#Service_Desk_email_address
+<http://www.semanticweb.org/ontology#Service_Desk_email_address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Service_Desk_email_address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceDesk> .
+<http://www.semanticweb.org/ontology#Service_Desk_email_address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Service_Desk_email_address> <http://www.w3.org/2000/01/rdf-schema#comment> "Contact point of Service Desk" .
+# 
+# http://www.semanticweb.org/ontology#Service_Gallery
+<http://www.semanticweb.org/ontology#Service_Gallery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Service_Gallery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Service_Gallery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Service_Gallery> <http://www.w3.org/2000/01/rdf-schema#comment> "Representative Images/Videos of Service Features, These images will be visible in the Service Detail Page of the Service Registry"@en .
+# 
+# http://www.semanticweb.org/ontology#Service_Id
+<http://www.semanticweb.org/ontology#Service_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Service_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Service_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Service_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of a resource"@en .
+# 
+# http://www.semanticweb.org/ontology#Service_Name
+<http://www.semanticweb.org/ontology#Service_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Service_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Service_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Service_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the service"@en .
+# 
+# http://www.semanticweb.org/ontology#Service_Onboarding_Approval_Date
+<http://www.semanticweb.org/ontology#Service_Onboarding_Approval_Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Service_Onboarding_Approval_Date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#OnboardedService> .
+<http://www.semanticweb.org/ontology#Service_Onboarding_Approval_Date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/ontology#Service_Onboarding_Approval_Date> <http://www.w3.org/2000/01/rdf-schema#comment> "Board Approval date of the Onboarding or Service Update"@en .
+# 
+# http://www.semanticweb.org/ontology#Service_Type
+<http://www.semanticweb.org/ontology#Service_Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Service_Type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Service_Type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Service_Type> <http://www.w3.org/2000/01/rdf-schema#comment> "Platform Management Service, Data Management Service, Onboarded Service, Federated Service"@en .
+# 
+# http://www.semanticweb.org/ontology#Service_issue_date
+<http://www.semanticweb.org/ontology#Service_issue_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Service_issue_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Service_issue_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/ontology#Service_issue_date> <http://www.w3.org/2000/01/rdf-schema#comment> "Issue date of the service"@en .
+# 
+# http://www.semanticweb.org/ontology#Service_version
+<http://www.semanticweb.org/ontology#Service_version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Service_version> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Service_version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Service_version> <http://www.w3.org/2000/01/rdf-schema#comment> "Version of the service"@en .
+# 
+# http://www.semanticweb.org/ontology#Size
+<http://www.semanticweb.org/ontology#Size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Size> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#Size> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/ontology#Size> <http://www.w3.org/2000/01/rdf-schema#comment> "Size of the user datum"@en .
+# 
+# http://www.semanticweb.org/ontology#Software_Name
+<http://www.semanticweb.org/ontology#Software_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Software_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Software_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Software_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the software"@en .
+# 
+# http://www.semanticweb.org/ontology#Software_Version
+<http://www.semanticweb.org/ontology#Software_Version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Software_Version> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Software_Version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Software_Version> <http://www.w3.org/2000/01/rdf-schema#comment> "Version of the software"@en .
+# 
+# http://www.semanticweb.org/ontology#Spatial_Coverage
+<http://www.semanticweb.org/ontology#Spatial_Coverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Spatial_Coverage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#Spatial_Coverage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Spatial_Coverage> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial coverage"@en .
+# 
+# http://www.semanticweb.org/ontology#StartTime
+<http://www.semanticweb.org/ontology#StartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#StartTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#StartTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/ontology#StartTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The start time of an action." .
+# 
+# http://www.semanticweb.org/ontology#Statistic_Name
+<http://www.semanticweb.org/ontology#Statistic_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Statistic_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Statistics> .
+<http://www.semanticweb.org/ontology#Statistic_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Statistic_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the statistic" .
+# 
+# http://www.semanticweb.org/ontology#Storage_Bandwidth
+<http://www.semanticweb.org/ontology#Storage_Bandwidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Storage_Bandwidth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Storage> .
+<http://www.semanticweb.org/ontology#Storage_Bandwidth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Storage_Bandwidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Bandwidth of the storage" .
+# 
+# http://www.semanticweb.org/ontology#Storage_Performance
+<http://www.semanticweb.org/ontology#Storage_Performance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Storage_Performance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Storage> .
+<http://www.semanticweb.org/ontology#Storage_Performance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Storage_Performance> <http://www.w3.org/2000/01/rdf-schema#comment> "Performance of the storage" .
+# 
+# http://www.semanticweb.org/ontology#Storage_Size
+<http://www.semanticweb.org/ontology#Storage_Size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Storage_Size> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Storage> .
+<http://www.semanticweb.org/ontology#Storage_Size> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/ontology#Storage_Size> <http://www.w3.org/2000/01/rdf-schema#comment> "Size of the storage" .
+# 
+# http://www.semanticweb.org/ontology#Storage_Technology
+<http://www.semanticweb.org/ontology#Storage_Technology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Storage_Technology> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Storage> .
+<http://www.semanticweb.org/ontology#Storage_Technology> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Storage_Technology> <http://www.w3.org/2000/01/rdf-schema#comment> "Technology of the storage" .
+# 
+# http://www.semanticweb.org/ontology#Storage_Type
+<http://www.semanticweb.org/ontology#Storage_Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Storage_Type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Storage> .
+<http://www.semanticweb.org/ontology#Storage_Type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Storage_Type> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of the storage" .
+# 
+# http://www.semanticweb.org/ontology#Storage_Volume
+<http://www.semanticweb.org/ontology#Storage_Volume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Storage_Volume> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Storage> .
+<http://www.semanticweb.org/ontology#Storage_Volume> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Storage_Volume> <http://www.w3.org/2000/01/rdf-schema#comment> "Volume of the storage" .
+# 
+# http://www.semanticweb.org/ontology#Summary
+<http://www.semanticweb.org/ontology#Summary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Summary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Summary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Summary> <http://www.w3.org/2000/01/rdf-schema#comment> "summary of the issue" .
+# 
+# http://www.semanticweb.org/ontology#Tags
+<http://www.semanticweb.org/ontology#Tags> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Tags> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Tags> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Tags> <http://www.w3.org/2000/01/rdf-schema#comment> "Internal Service Classification, these words will be used for the Service discovery"@en .
+# 
+# http://www.semanticweb.org/ontology#Target_EntryPoint
+<http://www.semanticweb.org/ontology#Target_EntryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Target_EntryPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Action> .
+<http://www.semanticweb.org/ontology#Target_EntryPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Target_EntryPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "An entrypoint used to execute the action." .
+# 
+# http://www.semanticweb.org/ontology#Technical_Contact_Point
+<http://www.semanticweb.org/ontology#Technical_Contact_Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Technical_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#ServiceInterface> .
+<http://www.semanticweb.org/ontology#Technical_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Technical_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Address for information requests about the Interface"@en .
+# 
+# http://www.semanticweb.org/ontology#Terms_of_Service_Url
+<http://www.semanticweb.org/ontology#Terms_of_Service_Url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Terms_of_Service_Url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Client> .
+<http://www.semanticweb.org/ontology#Terms_of_Service_Url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Terms_of_Service_Url> <http://www.w3.org/2000/01/rdf-schema#comment> "URL that the Service Client provides to end-users to read about the Participant's terms of service" .
+# 
+# http://www.semanticweb.org/ontology#Thumbnail
+<http://www.semanticweb.org/ontology#Thumbnail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Thumbnail> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Thumbnail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Thumbnail> <http://www.w3.org/2000/01/rdf-schema#comment> "Representative Image of the Service, this will present the Service in the Service discovery list"@en .
+# 
+# http://www.semanticweb.org/ontology#Ticketing_System_Name
+<http://www.semanticweb.org/ontology#Ticketing_System_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Ticketing_System_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#TicketingSystem> .
+<http://www.semanticweb.org/ontology#Ticketing_System_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Ticketing_System_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Ticketing system name" .
+# 
+# http://www.semanticweb.org/ontology#Ticketing_System_Project_Name
+<http://www.semanticweb.org/ontology#Ticketing_System_Project_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Ticketing_System_Project_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#TicketingSystemProject> .
+<http://www.semanticweb.org/ontology#Ticketing_System_Project_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Ticketing_System_Project_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Ticketing system project name" .
+# 
+# http://www.semanticweb.org/ontology#Ticketing_system_Project_website_address
+<http://www.semanticweb.org/ontology#Ticketing_system_Project_website_address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Ticketing_system_Project_website_address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#TicketingSystemProject> .
+<http://www.semanticweb.org/ontology#Ticketing_system_Project_website_address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Ticketing_system_Project_website_address> <http://www.w3.org/2000/01/rdf-schema#comment> "Website address of ticketing system project" .
+# 
+# http://www.semanticweb.org/ontology#Ticketing_system_website_address
+<http://www.semanticweb.org/ontology#Ticketing_system_website_address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Ticketing_system_website_address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#TicketingSystem> .
+<http://www.semanticweb.org/ontology#Ticketing_system_website_address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/ontology#Ticketing_system_website_address> <http://www.w3.org/2000/01/rdf-schema#comment> "Website address of ticketing system" .
+# 
+# http://www.semanticweb.org/ontology#Time_Coverage_End
+<http://www.semanticweb.org/ontology#Time_Coverage_End> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Time_Coverage_End> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#Time_Coverage_End> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/ontology#Time_Coverage_End> <http://www.w3.org/2000/01/rdf-schema#comment> "Time coverage end"@en .
+# 
+# http://www.semanticweb.org/ontology#Time_Coverage_Start
+<http://www.semanticweb.org/ontology#Time_Coverage_Start> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Time_Coverage_Start> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserData> .
+<http://www.semanticweb.org/ontology#Time_Coverage_Start> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/ontology#Time_Coverage_Start> <http://www.w3.org/2000/01/rdf-schema#comment> "Time coverage start"@en .
+# 
+# http://www.semanticweb.org/ontology#Time_to_first_response
+<http://www.semanticweb.org/ontology#Time_to_first_response> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Time_to_first_response> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Time_to_first_response> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Time_to_first_response> <http://www.w3.org/2000/01/rdf-schema#comment> "it corresponds to the time elapsed from the issue creation and the moment in which the first automatic response is sent to the user and the issue is updated in RECEIVED status" .
+# 
+# http://www.semanticweb.org/ontology#Time_to_resolution
+<http://www.semanticweb.org/ontology#Time_to_resolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Time_to_resolution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Issue> .
+<http://www.semanticweb.org/ontology#Time_to_resolution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Time_to_resolution> <http://www.w3.org/2000/01/rdf-schema#comment> "It corresponds to the time elapsed form when the issue is put in TO DO status to its resolution and closure. The time spent in ON GOING status shell be deduct form the count." .
+# 
+# http://www.semanticweb.org/ontology#Timeline
+<http://www.semanticweb.org/ontology#Timeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Timeline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Report> .
+<http://www.semanticweb.org/ontology#Timeline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Timeline> <http://www.w3.org/2000/01/rdf-schema#comment> "Daily, weekly, monthly, annually, defined period" .
+# 
+# http://www.semanticweb.org/ontology#Transaction_Id
+<http://www.semanticweb.org/ontology#Transaction_Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#Transaction_Id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Transaction> .
+<http://www.semanticweb.org/ontology#Transaction_Id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#Transaction_Id> <http://www.w3.org/2000/01/rdf-schema#comment> "identifier of the transaction" .
+# 
+# http://www.semanticweb.org/ontology#User_Support_Category
+<http://www.semanticweb.org/ontology#User_Support_Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#User_Support_Category> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserSupport> .
+<http://www.semanticweb.org/ontology#User_Support_Category> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#User_Support_Category> <http://www.w3.org/2000/01/rdf-schema#comment> "Ticket category a user can choose" .
+# 
+# http://www.semanticweb.org/ontology#User_Support_Description
+<http://www.semanticweb.org/ontology#User_Support_Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#User_Support_Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserSupport> .
+<http://www.semanticweb.org/ontology#User_Support_Description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#User_Support_Description> <http://www.w3.org/2000/01/rdf-schema#comment> "Ticket description provided by users" .
+# 
+# http://www.semanticweb.org/ontology#User_Support_Relevance
+<http://www.semanticweb.org/ontology#User_Support_Relevance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#User_Support_Relevance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserSupport> .
+<http://www.semanticweb.org/ontology#User_Support_Relevance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#User_Support_Relevance> <http://www.w3.org/2000/01/rdf-schema#comment> "Field where users set the severity of the issue according to their feeling" .
+# 
+# http://www.semanticweb.org/ontology#User_Support_Title
+<http://www.semanticweb.org/ontology#User_Support_Title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#User_Support_Title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserSupport> .
+<http://www.semanticweb.org/ontology#User_Support_Title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#User_Support_Title> <http://www.w3.org/2000/01/rdf-schema#comment> "Ticket tile assigned by users" .
+# 
+# http://www.semanticweb.org/ontology#User_email
+<http://www.semanticweb.org/ontology#User_email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#User_email> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#UserSupport> .
+<http://www.semanticweb.org/ontology#User_email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#User_email> <http://www.w3.org/2000/01/rdf-schema#comment> "Email of the user who raise the request" .
+# 
+# http://www.semanticweb.org/ontology#ai_Service_Memory
+<http://www.semanticweb.org/ontology#ai_Service_Memory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#ai_Service_Memory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Data_And_Ai> .
+<http://www.semanticweb.org/ontology#ai_Service_Memory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/ontology#ai_Service_Memory> <http://www.w3.org/2000/01/rdf-schema#comment> "Amount of memory allocated for running an AI service or application" .
+# 
+# http://www.semanticweb.org/ontology#ai_Service_Name
+<http://www.semanticweb.org/ontology#ai_Service_Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#ai_Service_Name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Data_And_Ai> .
+<http://www.semanticweb.org/ontology#ai_Service_Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#ai_Service_Name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the AI service" .
+# 
+# http://www.semanticweb.org/ontology#ai_Service_Public_Network_description
+<http://www.semanticweb.org/ontology#ai_Service_Public_Network_description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#ai_Service_Public_Network_description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Data_And_Ai> .
+<http://www.semanticweb.org/ontology#ai_Service_Public_Network_description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/ontology#ai_Service_Public_Network_description> <http://www.w3.org/2000/01/rdf-schema#comment> "AI service that is accessible via a public network" .
+# 
+# http://www.semanticweb.org/ontology#ai_Service_Storage
+<http://www.semanticweb.org/ontology#ai_Service_Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#ai_Service_Storage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Data_And_Ai> .
+<http://www.semanticweb.org/ontology#ai_Service_Storage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/ontology#ai_Service_Storage> <http://www.w3.org/2000/01/rdf-schema#comment> "Storage requirements for an AI service or application" .
+# 
+# http://www.semanticweb.org/ontology#ai_Service_vcore
+<http://www.semanticweb.org/ontology#ai_Service_vcore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontology#ai_Service_vcore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontology#Data_And_Ai> .
+<http://www.semanticweb.org/ontology#ai_Service_vcore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/ontology#ai_Service_vcore> <http://www.w3.org/2000/01/rdf-schema#comment> "Core of the AI Service" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/ontology#Action
+<http://www.semanticweb.org/ontology#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Action> <http://www.w3.org/2000/01/rdf-schema#comment> "An operation that can be exercised on a Resource." .
+# 
+# http://www.semanticweb.org/ontology#Application
+<http://www.semanticweb.org/ontology#Application> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#Resource> .
+<http://www.semanticweb.org/ontology#Application> <http://www.w3.org/2000/01/rdf-schema#comment> "software package, library or algorithm that performs a specific function, that can be installed within the infrastructure to communicate or process data on behalf of the Participants." .
+# 
+# http://www.semanticweb.org/ontology#ClearingHouse
+<http://www.semanticweb.org/ontology#ClearingHouse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#ClearingHouse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#ClearingHouse> <http://www.w3.org/2000/01/rdf-schema#comment> "Platform Management Service dedicated to the storing of the transactions received by each DestinE Platform Service." .
+# 
+# http://www.semanticweb.org/ontology#Client
+<http://www.semanticweb.org/ontology#Client> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Client> <http://www.w3.org/2000/01/rdf-schema#comment> "entities that request IAM Service to authenticate and secure themselves" .
+# 
+# http://www.semanticweb.org/ontology#ClientRole
+<http://www.semanticweb.org/ontology#ClientRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#ClientRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Role that a client can define." .
+# 
+# http://www.semanticweb.org/ontology#CloudResource
+<http://www.semanticweb.org/ontology#CloudResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#CloudResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#Resource> .
+<http://www.semanticweb.org/ontology#CloudResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Any computing resource or service that is hosted in a cloud computing environment. Cloud resources can include virtual machines, storage, databases, networking components, software applications, development platforms, and other IT infrastructure and services that are provided and accessed over the internet via cloud computing providers." .
+# 
+# http://www.semanticweb.org/ontology#ComputingInstances
+<http://www.semanticweb.org/ontology#ComputingInstances> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#ComputingInstances> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#CloudResource> .
+<http://www.semanticweb.org/ontology#ComputingInstances> <http://www.w3.org/2000/01/rdf-schema#comment> "virtualized computing resources provisioned by cloud service provider to users for running applications, workloads, or services in the cloud. These instances are typically virtual machines (VMs), allowing users to access and utilize computing resources on-demand via the internet." .
+# 
+# http://www.semanticweb.org/ontology#ContainerServices
+<http://www.semanticweb.org/ontology#ContainerServices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#ContainerServices> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#CloudResource> .
+<http://www.semanticweb.org/ontology#ContainerServices> <http://www.w3.org/2000/01/rdf-schema#comment> "cloud computing services that facilitate the deployment, management, and scaling of containerized applications in a cloud environment" .
+# 
+# http://www.semanticweb.org/ontology#Contract
+<http://www.semanticweb.org/ontology#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Contract> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract set of rules governing the usage of a Resource." .
+# 
+# http://www.semanticweb.org/ontology#DataCollection
+<http://www.semanticweb.org/ontology#DataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#DataCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#DataCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "A subset of the User Data offer belonging to a specific provider, organisation, or programme (e.g., ESA Copernicus Collection, ECMWF CAMs Collection, NASA Modis data)." .
+# 
+# http://www.semanticweb.org/ontology#DataPortfolio
+<http://www.semanticweb.org/ontology#DataPortfolio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#DataPortfolio> <http://www.w3.org/2000/01/rdf-schema#comment> "Repository for all information relevant to data of an organization." .
+# 
+# http://www.semanticweb.org/ontology#DataResource
+<http://www.semanticweb.org/ontology#DataResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#DataResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#Resource> .
+<http://www.semanticweb.org/ontology#DataResource> <http://www.w3.org/2000/01/rdf-schema#comment> "identifiable, valuable, digital (non-physical) commodity exchanged among Participants by means of DestinE Platform Services" .
+# 
+# http://www.semanticweb.org/ontology#Data_And_Ai
+<http://www.semanticweb.org/ontology#Data_And_Ai> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Data_And_Ai> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#CloudResource> .
+<http://www.semanticweb.org/ontology#Data_And_Ai> <http://www.w3.org/2000/01/rdf-schema#comment> "enable to store, manage, analyze, and derive insights from large volumes of data using artificial intelligence (AI) and machine learning (ML) techniques." .
+# 
+# http://www.semanticweb.org/ontology#Dataset
+<http://www.semanticweb.org/ontology#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A subset of a collection that can be defined according to ad-hoc criteria (e.g., all User Data from a Sentinel mission, all User Data corresponding to a specific product level, information from a given Copernicus Service or Contributing Mission, a multi-satellite coverage, etc.)" .
+# 
+# http://www.semanticweb.org/ontology#DestinE_Platform_Service
+<http://www.semanticweb.org/ontology#DestinE_Platform_Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#DestinE_Platform_Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#Resource> .
+<http://www.semanticweb.org/ontology#DestinE_Platform_Service> <http://www.w3.org/2000/01/rdf-schema#comment> "Class of all the DestinE Platform services, implementing a specific function operated by a Service Provider based on a service-level agreement." .
+# 
+# http://www.semanticweb.org/ontology#Duty
+<http://www.semanticweb.org/ontology#Duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Duty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#Rule> .
+<http://www.semanticweb.org/ontology#Duty> <http://www.w3.org/2000/01/rdf-schema#comment> "The obligation to exercise an Action." .
+# 
+# http://www.semanticweb.org/ontology#Event
+<http://www.semanticweb.org/ontology#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Event> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontology#CloudResource> .
+_:genid1 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontology#extracted_from_CloudResource> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/ontology#Event> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+_:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontology#extracted_from_Runtime> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/ontology#Event> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontology#CloudResource> .
+_:genid3 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontology#extracted_from_CloudResource> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/ontology#Event> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontology#RuntimePlatform> .
+_:genid4 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontology#extracted_from_Runtime> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/ontology#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "any occurrence that is relevant to a service, of interest for monitoring purposes." .
+# 
+# http://www.semanticweb.org/ontology#Feedback
+<http://www.semanticweb.org/ontology#Feedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Feedback> <http://www.w3.org/2000/01/rdf-schema#comment> "evaluation provided by users on services capabilities and potencial action items, or ticket resolution." .
+# 
+# http://www.semanticweb.org/ontology#Hpc
+<http://www.semanticweb.org/ontology#Hpc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Hpc> <http://www.w3.org/2000/01/rdf-schema#comment> "High-Performance Computing solutions." .
+# 
+# http://www.semanticweb.org/ontology#Iam_Service
+<http://www.semanticweb.org/ontology#Iam_Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Iam_Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Iam_Service> <http://www.w3.org/2000/01/rdf-schema#comment> "unified DestinE Platform user management service, granting access to all authorised  Registered Services based on the same digital identity" .
+# 
+# http://www.semanticweb.org/ontology#Issue
+<http://www.semanticweb.org/ontology#Issue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Issue> <http://www.w3.org/2000/01/rdf-schema#comment> "Record within a ticketing system raised by DestinE Platform stakeholders." .
+# 
+# http://www.semanticweb.org/ontology#Kpi
+<http://www.semanticweb.org/ontology#Kpi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Kpi> <http://www.w3.org/2000/01/rdf-schema#comment> "key performance indicator, i.e., a quantifiable measure of performance over time for a specific objective." .
+# 
+# http://www.semanticweb.org/ontology#MonitoringService
+<http://www.semanticweb.org/ontology#MonitoringService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#MonitoringService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#MonitoringService> <http://www.w3.org/2000/01/rdf-schema#comment> "Service Operations Monitoring Dashboard Service allows real-time monitoring of DestinE Platform operations and performance." .
+# 
+# http://www.semanticweb.org/ontology#NetworkServices
+<http://www.semanticweb.org/ontology#NetworkServices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#NetworkServices> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#CloudResource> .
+<http://www.semanticweb.org/ontology#NetworkServices> <http://www.w3.org/2000/01/rdf-schema#comment> "a set of networking capabilities and services provided by cloud computing providers to enable connectivity, communication, and security within cloud environments." .
+# 
+# http://www.semanticweb.org/ontology#OnboardedService
+<http://www.semanticweb.org/ontology#OnboardedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#OnboardedService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#OnboardedService> <http://www.w3.org/2000/01/rdf-schema#comment> "Class of Services become part of DestinE Platform ecosystem after successfully completing the Onboarding Procedure." .
+# 
+# http://www.semanticweb.org/ontology#Participant
+<http://www.semanticweb.org/ontology#Participant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Participant> <http://www.w3.org/2000/01/rdf-schema#comment> "Legal or natural persons (stakeholders) that interact using the Destine Platform, at undertake Roles adhering to formal Regulations." .
+# 
+# http://www.semanticweb.org/ontology#Permission
+<http://www.semanticweb.org/ontology#Permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Permission> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#Rule> .
+<http://www.semanticweb.org/ontology#Permission> <http://www.w3.org/2000/01/rdf-schema#comment> "The ability to exercise an Action over an Resource. The Permission MAY also have the duty property that expresses an agreed Action that MUST be exercised (as a pre-condition to be granted the Permission)" .
+# 
+# http://www.semanticweb.org/ontology#Person
+<http://www.semanticweb.org/ontology#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of persons (people). Every Person is given a unique identity by the IAM Service." .
+# 
+# http://www.semanticweb.org/ontology#PostalAddress
+<http://www.semanticweb.org/ontology#PostalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#PostalAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Class for postal addresses." .
+# 
+# http://www.semanticweb.org/ontology#Prohibition
+<http://www.semanticweb.org/ontology#Prohibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Prohibition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#Rule> .
+<http://www.semanticweb.org/ontology#Prohibition> <http://www.w3.org/2000/01/rdf-schema#comment> "The inability to exercise an Action over a Resource." .
+# 
+# http://www.semanticweb.org/ontology#Report
+<http://www.semanticweb.org/ontology#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Report> <http://www.w3.org/2000/01/rdf-schema#comment> "document presenting information in a specific format for a specific audience and purpose." .
+# 
+# http://www.semanticweb.org/ontology#Resource
+<http://www.semanticweb.org/ontology#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract Class of Resources, covering what can be provided and/or consumed in the framework of DestinE Platform." .
+# 
+# http://www.semanticweb.org/ontology#Rule
+<http://www.semanticweb.org/ontology#Rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Rule> <http://www.w3.org/2000/01/rdf-schema#comment> "Superclass of Permissions, Prohibitions and Duties." .
+# 
+# http://www.semanticweb.org/ontology#RuntimePlatform
+<http://www.semanticweb.org/ontology#RuntimePlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#RuntimePlatform> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+_:genid5 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontology#hosts> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/ontology#RuntimePlatform> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+_:genid6 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontology#hosts> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/ontology#RuntimePlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "common layer available for the deployment and operation of all the DestinE Platform services – depending on their type and agreed integration." .
+# 
+# http://www.semanticweb.org/ontology#ServiceDesk
+<http://www.semanticweb.org/ontology#ServiceDesk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#ServiceDesk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#ServiceDesk> <http://www.w3.org/2000/01/rdf-schema#comment> "Service reponsible of DestinE Platform ticketing system; and user feedbacks analysis and reporting." .
+# 
+# http://www.semanticweb.org/ontology#ServiceInterface
+<http://www.semanticweb.org/ontology#ServiceInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#ServiceInterface> <http://www.w3.org/2000/01/rdf-schema#comment> "Class of interfaces that constitute a Service (Core or Onboarded)" .
+# 
+# http://www.semanticweb.org/ontology#ServiceRegistry
+<http://www.semanticweb.org/ontology#ServiceRegistry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#ServiceRegistry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#ServiceRegistry> <http://www.w3.org/2000/01/rdf-schema#comment> "catalogues applications and services integrated in DestinE Platform." .
+# 
+# http://www.semanticweb.org/ontology#Statistics
+<http://www.semanticweb.org/ontology#Statistics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Statistics> <http://www.w3.org/2000/01/rdf-schema#comment> "aggregation of events." .
+# 
+# http://www.semanticweb.org/ontology#Storage
+<http://www.semanticweb.org/ontology#Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Storage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#CloudResource> .
+<http://www.semanticweb.org/ontology#Storage> <http://www.w3.org/2000/01/rdf-schema#comment> "a type of data storage provided by cloud computing providers over the internet. It allows users to store and manage data resource." .
+# 
+# http://www.semanticweb.org/ontology#TicketingSystem
+<http://www.semanticweb.org/ontology#TicketingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#TicketingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "used to process, manage and track issues from submission to resolution." .
+# 
+# http://www.semanticweb.org/ontology#TicketingSystemProject
+<http://www.semanticweb.org/ontology#TicketingSystemProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#TicketingSystemProject> <http://www.w3.org/2000/01/rdf-schema#comment> "collection of issues in the Ticketing System." .
+# 
+# http://www.semanticweb.org/ontology#Transaction
+<http://www.semanticweb.org/ontology#Transaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Transaction> <http://www.w3.org/2000/01/rdf-schema#comment> "a completed event, that can be allowed by a Service." .
+# 
+# http://www.semanticweb.org/ontology#UserData
+<http://www.semanticweb.org/ontology#UserData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#UserData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#UserData> <http://www.w3.org/2000/01/rdf-schema#comment> "any data constituting a Dataset.\nUser Data are subject to forwarding, processing, or consumption." .
+# 
+# http://www.semanticweb.org/ontology#UserGeneratedData
+<http://www.semanticweb.org/ontology#UserGeneratedData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#UserGeneratedData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DataResource> .
+<http://www.semanticweb.org/ontology#UserGeneratedData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data generated or provided by users to the DestinE Platform Ecosystem." .
+# 
+# http://www.semanticweb.org/ontology#UserSupport
+<http://www.semanticweb.org/ontology#UserSupport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#UserSupport> <http://www.w3.org/2000/01/rdf-schema#comment> "request raised by a user to ask support." .
+# 
+# http://www.semanticweb.org/ontology#Id_&_Os_Service
+<http://www.semanticweb.org/ontology#Id_&_Os_Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontology#Id_&_Os_Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontology#DestinE_Platform_Service> .
+<http://www.semanticweb.org/ontology#Id_&_Os_Service> <http://www.w3.org/2000/01/rdf-schema#comment> "The Information Dissemination and Onboarding Support Service is the entry point for users approaching to DestinE Platform, as well as of the related user experience and community engagement activities." .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

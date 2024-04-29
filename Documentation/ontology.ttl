@@ -1,0 +1,1934 @@
+@prefix : <http://www.semanticweb.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ontology#> .
+
+<http://www.semanticweb.org/ontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#GeoJson
+xsd:GeoJson rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#byte
+xsd:byte rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#uuid
+xsd:uuid rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ontology#access_rights
+:access_rights rdf:type owl:ObjectProperty ;
+               rdfs:domain :Iam_Service ;
+               rdfs:range :Resource ;
+               rdfs:comment "Access rights relevant to resource  usage, regulated by IAM Service." .
+
+
+###  http://www.semanticweb.org/ontology#active_user
+:active_user rdf:type owl:ObjectProperty ;
+             rdfs:domain :Transaction ;
+             rdfs:range :Person ;
+             rdfs:comment "individual or service accounts who have registered with DestinE Platform and utilize DestinE Platform services to access resources within a time interval" .
+
+
+###  http://www.semanticweb.org/ontology#aggregates
+:aggregates rdf:type owl:ObjectProperty ;
+            rdfs:domain :MonitoringService ;
+            rdfs:range :Event ;
+            rdfs:comment "SOMD aggregates events" .
+
+
+###  http://www.semanticweb.org/ontology#aggregation_of
+:aggregation_of rdf:type owl:ObjectProperty ;
+                rdfs:domain :Statistics ;
+                rdfs:range :Event ;
+                rdfs:comment "Events aggregated and constituting the Statistic" .
+
+
+###  http://www.semanticweb.org/ontology#assigneeOf
+:assigneeOf rdf:type owl:ObjectProperty ;
+            rdfs:domain :Participant ;
+            rdfs:range :Contract ;
+            rdfs:comment "Identifies the Contract for which the identified Participant undertakes the assignee functional role." .
+
+
+###  http://www.semanticweb.org/ontology#assignerOf
+:assignerOf rdf:type owl:ObjectProperty ;
+            rdfs:domain :Participant ;
+            rdfs:range :Contract ;
+            rdfs:comment "Identifies the Contract for which the identified Participant undertakes the assigner functional role." .
+
+
+###  http://www.semanticweb.org/ontology#authentication
+:authentication rdf:type owl:ObjectProperty ;
+                rdfs:domain :Iam_Service ;
+                rdfs:range :Person ;
+                rdfs:comment "User authentication implemented by IAM Service" .
+
+
+###  http://www.semanticweb.org/ontology#authorization
+:authorization rdf:type owl:ObjectProperty ;
+               rdfs:domain :Iam_Service ;
+               rdfs:range :Person ;
+               rdfs:comment "User authorization implemented by IAM Service" .
+
+
+###  http://www.semanticweb.org/ontology#calculates_kpi
+:calculates_kpi rdf:type owl:ObjectProperty ;
+                rdfs:domain :MonitoringService ;
+                rdfs:range :Event ;
+                rdfs:comment "SOMD calculates KPI from events" .
+
+
+###  http://www.semanticweb.org/ontology#client_configuration
+:client_configuration rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Iam_Service ;
+                      rdfs:range :Client ;
+                      rdfs:comment "Client configuration via IAM Service" .
+
+
+###  http://www.semanticweb.org/ontology#collects
+:collects rdf:type owl:ObjectProperty ;
+          rdfs:domain :DataCollection ;
+          rdfs:range :Dataset ;
+          rdfs:comment "Dataset collected by a Data Collection" .
+
+
+###  http://www.semanticweb.org/ontology#consequence
+:consequence rdf:type owl:ObjectProperty ;
+             rdfs:domain :Duty ;
+             rdfs:range :Duty ;
+             rdfs:comment "Relates a Duty to another Duty, the latter being a consequence of not fulfilling the former." .
+
+
+###  http://www.semanticweb.org/ontology#constituted_by
+:constituted_by rdf:type owl:ObjectProperty ;
+                rdfs:domain :Dataset ;
+                rdfs:range :UserData ;
+                rdfs:comment "User Data constituting a Dataset" .
+
+
+###  http://www.semanticweb.org/ontology#consumer
+:consumer rdf:type owl:ObjectProperty ;
+          rdfs:domain :Contract ;
+          rdfs:range :Participant ;
+          rdfs:comment """Consumer of a Resource or Service that is the subject matter of the Contract. 
+This party may differ from the Assignee specified by the Contract rules.""" .
+
+
+###  http://www.semanticweb.org/ontology#contract_offer
+:contract_offer rdf:type owl:ObjectProperty ;
+                rdfs:domain :Resource ;
+                rdfs:range :Contract ;
+                rdfs:comment "Contract Offer defining the authorized use of the Resource" .
+
+
+###  http://www.semanticweb.org/ontology#creator
+:creator rdf:type owl:ObjectProperty ;
+         rdfs:domain :DataResource ;
+         rdfs:range :Participant ;
+         rdfs:comment "The entity responsible for producing the resource." .
+
+
+###  http://www.semanticweb.org/ontology#curator
+:curator rdf:type owl:ObjectProperty ;
+         rdfs:domain :CloudResource ;
+         rdfs:range :Participant ;
+         rdfs:comment "Participant responsible for the correctness of the content offered by the Cloud Resource." .
+
+
+###  http://www.semanticweb.org/ontology#defined_Roles
+:defined_Roles rdf:type owl:ObjectProperty ;
+               rdfs:domain :Client ;
+               rdfs:range :ClientRole ;
+               rdfs:comment "Clients can define roles that are specific to them." .
+
+
+###  http://www.semanticweb.org/ontology#deployed
+:deployed rdf:type owl:ObjectProperty ;
+          rdfs:domain :Application ;
+          rdfs:range :ContainerServices ;
+          rdfs:comment "Deploying of an application in a dedicated Container Service" .
+
+
+###  http://www.semanticweb.org/ontology#event_end
+:event_end rdf:type owl:ObjectProperty ;
+           rdfs:domain :Transaction ;
+           rdfs:range :Event ;
+           rdfs:comment "Transaction tracks the event end" .
+
+
+###  http://www.semanticweb.org/ontology#event_start
+:event_start rdf:type owl:ObjectProperty ;
+             rdfs:domain :Transaction ;
+             rdfs:range :Event ;
+             rdfs:comment "Transaction tracks the event start" .
+
+
+###  http://www.semanticweb.org/ontology#extracted_from_CloudResource
+:extracted_from_CloudResource rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Event ;
+                              rdfs:range :CloudResource ;
+                              rdfs:comment "Event occurred and extracted from Cloud Resource" .
+
+
+###  http://www.semanticweb.org/ontology#extracted_from_Runtime
+:extracted_from_Runtime rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Event ;
+                        rdfs:range :RuntimePlatform ;
+                        rdfs:comment "Event occurred and extracted from Runtime Platform" .
+
+
+###  http://www.semanticweb.org/ontology#extracted_from_Service
+:extracted_from_Service rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Event ;
+                        rdfs:range :DestinE_Platform_Service ;
+                        rdfs:comment "Event occurred and extracted from a DestinE Platform service" .
+
+
+###  http://www.semanticweb.org/ontology#has_action
+:has_action rdf:type owl:ObjectProperty ;
+            rdfs:domain :Rule ;
+            rdfs:range :Action ;
+            rdfs:comment "The operation relating to the Resource for which the Rule is being subjected." .
+
+
+###  http://www.semanticweb.org/ontology#has_assignee
+:has_assignee rdf:type owl:ObjectProperty ;
+              rdfs:domain :Rule ;
+              rdfs:range :Participant ;
+              rdfs:comment "indicates the Party that is the recipient the of Rule. For example, the Party being granted a Permission or required to fulfil an agreed Duty." .
+
+
+###  http://www.semanticweb.org/ontology#has_assigneer
+:has_assigneer rdf:type owl:ObjectProperty ;
+               rdfs:domain :Rule ;
+               rdfs:range :Participant ;
+               rdfs:comment "indicates the Party that is issuing the Rule. For example, the Party granting a Permission or requiring an agreed Duty to be fulfilled." .
+
+
+###  http://www.semanticweb.org/ontology#has_duty
+:has_duty rdf:type owl:ObjectProperty ;
+          rdfs:domain :Permission ;
+          rdfs:range :Duty ;
+          rdfs:comment """Relates an individual Duty to a Permission.
+Note: A Duty is a pre-condition which must be fulfilled in order to receive the Permission.""" .
+
+
+###  http://www.semanticweb.org/ontology#has_interface
+:has_interface rdf:type owl:ObjectProperty ;
+               rdfs:domain :DestinE_Platform_Service ;
+               rdfs:range :ServiceInterface ;
+               rdfs:comment "Interfaces of a Service exposed to users" .
+
+
+###  http://www.semanticweb.org/ontology#has_target
+:has_target rdf:type owl:ObjectProperty ;
+            rdfs:domain :Rule ;
+            rdfs:range :Resource ;
+            rdfs:comment """The subject of the policy statement. It indicates that the Resource is the primary subject to which the Rule action directly applies.
+Example: the assigner Participant offers to action the target Resource""" .
+
+
+###  http://www.semanticweb.org/ontology#hosts
+:hosts rdf:type owl:ObjectProperty ;
+       rdfs:domain :RuntimePlatform ;
+       rdfs:range :DestinE_Platform_Service ;
+       rdfs:comment "Runtime Platform can host Services according to agreed integration" .
+
+
+###  http://www.semanticweb.org/ontology#implies
+:implies rdf:type owl:ObjectProperty ;
+         rdfs:domain :Action ;
+         rdfs:range :Action ;
+         rdfs:comment "Constraint used to refine the semantics of an Action." .
+
+
+###  http://www.semanticweb.org/ontology#includedIn
+:includedIn rdf:type owl:ObjectProperty ;
+            rdfs:domain :Action ;
+            rdfs:range :Action ;
+            rdfs:comment "An Action asserts that another Action is not prohibited to enable its operational semantics." .
+
+
+###  http://www.semanticweb.org/ontology#information_provisioning
+:information_provisioning rdf:type owl:ObjectProperty ;
+                          rdfs:domain <http://www.semanticweb.org/ontology#Id_&_Os_Service> ;
+                          rdfs:range :Person ;
+                          rdfs:comment "Information concerning DestinE Platform made available to users thanks to the Web Portal" .
+
+
+###  http://www.semanticweb.org/ontology#issue_feedback
+:issue_feedback rdf:type owl:ObjectProperty ;
+                rdfs:domain :Issue ;
+                rdfs:range :Feedback ;
+                rdfs:comment "Feedback that a user can assign to the resolution and received support for an issue" .
+
+
+###  http://www.semanticweb.org/ontology#linked_Issues
+:linked_Issues rdf:type owl:ObjectProperty ;
+               rdfs:domain :Issue ;
+               rdfs:range :Issue ;
+               rdfs:comment "Issue linked to an Issue." .
+
+
+###  http://www.semanticweb.org/ontology#lists
+:lists rdf:type owl:ObjectProperty ;
+       rdfs:domain :DataPortfolio ;
+       rdfs:range :DataCollection ;
+       rdfs:comment "Data Collection listed in the Data Portfolio" .
+
+
+###  http://www.semanticweb.org/ontology#login
+:login rdf:type owl:ObjectProperty ;
+       rdfs:domain <http://www.semanticweb.org/ontology#Id_&_Os_Service> ;
+       rdfs:range :Person ;
+       rdfs:comment "Login enabled by Web Portal" .
+
+
+###  http://www.semanticweb.org/ontology#maintainer
+:maintainer rdf:type owl:ObjectProperty ;
+            rdfs:domain :CloudResource ;
+            rdfs:range :Participant ;
+            rdfs:comment "Participant responsible for technical maintenance of the Cloud Resource" .
+
+
+###  http://www.semanticweb.org/ontology#manages_client
+:manages_client rdf:type owl:ObjectProperty ;
+                rdfs:domain :DestinE_Platform_Service ;
+                rdfs:range :Client ;
+                rdfs:comment "Clients managed by a Service" .
+
+
+###  http://www.semanticweb.org/ontology#manages_identity
+:manages_identity rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Iam_Service ;
+                  rdfs:range :Person ;
+                  rdfs:comment "Identity management ensured by IAM Service" .
+
+
+###  http://www.semanticweb.org/ontology#manages_tickets
+:manages_tickets rdf:type owl:ObjectProperty ;
+                 rdfs:domain :ServiceDesk ;
+                 rdfs:range :TicketingSystem ;
+                 rdfs:comment "Service Desk manages and handle tickets" .
+
+
+###  http://www.semanticweb.org/ontology#memberPerson
+:memberPerson rdf:type owl:ObjectProperty ;
+              rdfs:domain :Participant ;
+              rdfs:range :Person ;
+              rdfs:comment "A person member of Participant" .
+
+
+###  http://www.semanticweb.org/ontology#obligation
+:obligation rdf:type owl:ObjectProperty ;
+            rdfs:domain :Contract ;
+            rdfs:range :Duty ;
+            rdfs:comment "Relates an individual Duty to a Contract" .
+
+
+###  http://www.semanticweb.org/ontology#organized_project
+:organized_project rdf:type owl:ObjectProperty ;
+                   rdfs:domain :TicketingSystem ;
+                   rdfs:range :TicketingSystemProject ;
+                   rdfs:comment "specific Projects organized into the Ticketing System" .
+
+
+###  http://www.semanticweb.org/ontology#participant_link
+:participant_link rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ServiceRegistry ;
+                  rdfs:range :Participant ;
+                  rdfs:comment "Link to integrated Participant, exposed by the Service Registry" .
+
+
+###  http://www.semanticweb.org/ontology#permission
+:permission rdf:type owl:ObjectProperty ;
+            rdfs:domain :Contract ;
+            rdfs:range :Permission ;
+            rdfs:comment "Relates an individual Permission to a Contract" .
+
+
+###  http://www.semanticweb.org/ontology#prohibition
+:prohibition rdf:type owl:ObjectProperty ;
+             rdfs:domain :Contract ;
+             rdfs:range :Prohibition ;
+             rdfs:comment "Relates an individual Prohibition to a Contract." .
+
+
+###  http://www.semanticweb.org/ontology#provider
+:provider rdf:type owl:ObjectProperty ;
+          rdfs:domain :Contract ;
+          rdfs:range :Participant ;
+          rdfs:comment """Provider of a Resource or Service that is the subject matter of the contract. 
+
+This party may differ from the Assigner specified by the Contract rules.""" .
+
+
+###  http://www.semanticweb.org/ontology#publisher
+:publisher rdf:type owl:ObjectProperty ;
+           rdfs:domain :DataResource ;
+           rdfs:range :Participant ;
+           rdfs:comment "The entity responsible for making the resource available (which may differ from the sovereign)." .
+
+
+###  http://www.semanticweb.org/ontology#records_received_transaction
+:records_received_transaction rdf:type owl:ObjectProperty ;
+                              rdfs:domain :ClearingHouse ;
+                              rdfs:range :Transaction ;
+                              rdfs:comment "Transactions recorded in the Clearing House" .
+
+
+###  http://www.semanticweb.org/ontology#remedy
+:remedy rdf:type owl:ObjectProperty ;
+        rdfs:domain :Prohibition ;
+        rdfs:range :Duty ;
+        rdfs:comment "Relates an individual remedy Duty to a Prohibition" .
+
+
+###  http://www.semanticweb.org/ontology#report_of
+:report_of rdf:type owl:ObjectProperty ;
+           rdfs:domain :Report ;
+           rdfs:range :Statistics ;
+           rdfs:comment "Statistics at the basis of the report" .
+
+
+###  http://www.semanticweb.org/ontology#service_feedback
+:service_feedback rdf:type owl:ObjectProperty ;
+                  rdfs:domain :DestinE_Platform_Service ;
+                  rdfs:range :Feedback ;
+                  rdfs:comment "Feedback that a user can assign to a Service" .
+
+
+###  http://www.semanticweb.org/ontology#service_link
+:service_link rdf:type owl:ObjectProperty ;
+              rdfs:domain :ServiceRegistry ;
+              rdfs:range :DestinE_Platform_Service ;
+              rdfs:comment "Link to the DestinE Platform service, exposed by the Service Registry" .
+
+
+###  http://www.semanticweb.org/ontology#site_address
+:site_address rdf:type owl:ObjectProperty ;
+              rdfs:domain :Participant ;
+              rdfs:range :PostalAddress ;
+              rdfs:comment """Address of an office or other premise at which the organization is located.
+It is particularly important in cases in which specific rules (e.g., national law) apply, affecting, for example, the data usage control policy.""" .
+
+
+###  http://www.semanticweb.org/ontology#sovereign
+:sovereign rdf:type owl:ObjectProperty ;
+           rdfs:domain :DataResource ;
+           rdfs:range :Participant ;
+           rdfs:comment "The 'owner', i.e. sovereign of the data." .
+
+
+###  http://www.semanticweb.org/ontology#stores
+:stores rdf:type owl:ObjectProperty ;
+        rdfs:domain :MonitoringService ;
+        rdfs:range :Event ;
+        rdfs:comment "SOMD stores events" .
+
+
+###  http://www.semanticweb.org/ontology#tracking_issues
+:tracking_issues rdf:type owl:ObjectProperty ;
+                 rdfs:domain :TicketingSystemProject ;
+                 rdfs:range :Issue ;
+                 rdfs:comment "Issues belonging to a Ticketing System Projects" .
+
+
+###  http://www.semanticweb.org/ontology#user_generated_data_provider
+:user_generated_data_provider rdf:type owl:ObjectProperty ;
+                              rdfs:domain :UserGeneratedData ;
+                              rdfs:range :Person ;
+                              rdfs:comment "provider of additional generated data" .
+
+
+###  http://www.semanticweb.org/ontology#uses_Compute
+:uses_Compute rdf:type owl:ObjectProperty ;
+              rdfs:domain :RuntimePlatform ;
+              rdfs:range :ComputingInstances ;
+              rdfs:comment "Computing instancing used by the Runtime Platform" .
+
+
+###  http://www.semanticweb.org/ontology#uses_Network
+:uses_Network rdf:type owl:ObjectProperty ;
+              rdfs:domain :RuntimePlatform ;
+              rdfs:range :NetworkServices ;
+              rdfs:comment "Network Services used by the Runtime Platform" .
+
+
+###  http://www.semanticweb.org/ontology#uses_Storage
+:uses_Storage rdf:type owl:ObjectProperty ;
+              rdfs:domain :RuntimePlatform ;
+              rdfs:range :Storage ;
+              rdfs:comment "Storage used by the Runtime Platform" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/ontology#Access_Policy_Description
+:Access_Policy_Description rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :ServiceInterface ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Description of request restrictions applied to Users. Example: “Service will be not available for Federated Users”"@en .
+
+
+###  http://www.semanticweb.org/ontology#ActionPerformer
+:ActionPerformer rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Action ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Participant performer of the Action" .
+
+
+###  http://www.semanticweb.org/ontology#ActionStatus
+:ActionStatus rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Action ;
+              rdfs:range xsd:string ;
+              rdfs:comment """Indicates the current disposition of the Action.
+In-progress, completed, failed, potential.""" .
+
+
+###  http://www.semanticweb.org/ontology#Action_Identifier
+:Action_Identifier rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Action ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Unique identifier of the Action" .
+
+
+###  http://www.semanticweb.org/ontology#Active_Security_Policy
+:Active_Security_Policy rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :RuntimePlatform ;
+                        rdfs:range xsd:boolean ;
+                        rdfs:comment "Flag relevant to security policy" .
+
+
+###  http://www.semanticweb.org/ontology#Application_functionality
+:Application_functionality rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Application ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Function(s) implemented by the application" .
+
+
+###  http://www.semanticweb.org/ontology#Application_version
+:Application_version rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Application ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Version of the application" .
+
+
+###  http://www.semanticweb.org/ontology#Approved
+:Approved rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Feedback ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Flag stating if the feedback has been approved or not" .
+
+
+###  http://www.semanticweb.org/ontology#Attachment
+:Attachment rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Issue ;
+            rdfs:range xsd:byte ;
+            rdfs:comment "Files and screenshots that clarify the issue description" .
+
+
+###  http://www.semanticweb.org/ontology#Base_Url
+:Base_Url rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Client ;
+          rdfs:range xsd:anyURI ;
+          rdfs:comment "default URL to use when the auth server needs to redirect or link back to the client" .
+
+
+###  http://www.semanticweb.org/ontology#City
+:City rdf:type owl:DatatypeProperty ;
+      rdfs:domain :PostalAddress ;
+      rdfs:range xsd:string ;
+      rdfs:comment "City name" .
+
+
+###  http://www.semanticweb.org/ontology#Client_Description
+:Client_Description rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Client ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "specifies description of the Client" .
+
+
+###  http://www.semanticweb.org/ontology#Client_Id
+:Client_Id rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Client ;
+           rdfs:range xsd:string ;
+           rdfs:comment "specifies ID referenced in URI and tokens" .
+
+
+###  http://www.semanticweb.org/ontology#Client_Name
+:Client_Name rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Client ;
+             rdfs:range xsd:string ;
+             rdfs:comment "specifies displayed name of the Client" .
+
+
+###  http://www.semanticweb.org/ontology#Client_Protocol
+:Client_Protocol rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Client ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Selected authentication standard protocol" .
+
+
+###  http://www.semanticweb.org/ontology#Client_Type
+:Client_Type rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Client ;
+             rdfs:range xsd:string ;
+             rdfs:comment """Client type: public, confidential.
+'Confidential' client requires a secret to initiate login protocol. 'Public' clients do not require a secret.""" .
+
+
+###  http://www.semanticweb.org/ontology#Cloud_Resource_Id
+:Cloud_Resource_Id rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :CloudResource ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Identifier of the Cloud Resource" .
+
+
+###  http://www.semanticweb.org/ontology#Cloud_Resource_type
+:Cloud_Resource_type rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :CloudResource ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "IaaS, PaaS, CaaS, SaaS" .
+
+
+###  http://www.semanticweb.org/ontology#Collection_Description
+:Collection_Description rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :DataCollection ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Description of the Collection" .
+
+
+###  http://www.semanticweb.org/ontology#Collection_Id
+:Collection_Id rdf:type owl:DatatypeProperty ;
+               rdfs:domain :DataCollection ;
+               rdfs:range xsd:uuid ;
+               rdfs:comment "Unique identifier of the dataset" .
+
+
+###  http://www.semanticweb.org/ontology#Collection_ModificationDate
+:Collection_ModificationDate rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :DataCollection ;
+                             rdfs:range xsd:dateTimeStamp ;
+                             rdfs:comment "Most recent date on which the Collection was changed, updated or modified." .
+
+
+###  http://www.semanticweb.org/ontology#Collection_PublicationDate
+:Collection_PublicationDate rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :DataCollection ;
+                            rdfs:range xsd:dateTimeStamp ;
+                            rdfs:comment "Date of formal issuance (e.g., publication) of the Collection." .
+
+
+###  http://www.semanticweb.org/ontology#Components
+:Components rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Issue ;
+            rdfs:range xsd:string ;
+            rdfs:comment "software component involved in the problem" .
+
+
+###  http://www.semanticweb.org/ontology#Components_Version
+:Components_Version rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Issue ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "software version of the component involved in the problem" .
+
+
+###  http://www.semanticweb.org/ontology#Computing_Instance_Private_Network_description
+:Computing_Instance_Private_Network_description rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain :ComputingInstances ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:comment "Private Network description of the computing instance" .
+
+
+###  http://www.semanticweb.org/ontology#Computing_Instance_Public_Network_description
+:Computing_Instance_Public_Network_description rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain :ComputingInstances ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "Public Network description of the computing instance" .
+
+
+###  http://www.semanticweb.org/ontology#Computing_Instance__Memory
+:Computing_Instance__Memory rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :ComputingInstances ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Memory of the computing instance" .
+
+
+###  http://www.semanticweb.org/ontology#Computing_Instance__Storage
+:Computing_Instance__Storage rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :ComputingInstances ;
+                             rdfs:range xsd:string ;
+                             rdfs:comment "Storage of the computing instance" .
+
+
+###  http://www.semanticweb.org/ontology#Computing_Instance__vcore
+:Computing_Instance__vcore rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :ComputingInstances ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Core of the computing instance" .
+
+
+###  http://www.semanticweb.org/ontology#Computing_Instance_name
+:Computing_Instance_name rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :ComputingInstances ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Name of the computing instance" .
+
+
+###  http://www.semanticweb.org/ontology#Conforms_To
+:Conforms_To rdf:type owl:DatatypeProperty ;
+             rdfs:domain :DataResource ;
+             rdfs:range xsd:string ;
+             rdfs:comment "An established standard to which the described item conforms."@en .
+
+
+###  http://www.semanticweb.org/ontology#Container_Description
+:Container_Description rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :ContainerServices ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Description of the container" .
+
+
+###  http://www.semanticweb.org/ontology#Container_Id
+:Container_Id rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ContainerServices ;
+              rdfs:range xsd:string ;
+              rdfs:comment "ID of the container" .
+
+
+###  http://www.semanticweb.org/ontology#Content_provenance
+:Content_provenance rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :DataResource ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Origin of the Content"@en .
+
+
+###  http://www.semanticweb.org/ontology#Contract_Identifier
+:Contract_Identifier rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Contract ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Unambiguous identifier to identify the Contract" .
+
+
+###  http://www.semanticweb.org/ontology#Contract_Offer_Ref
+:Contract_Offer_Ref rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :DataResource ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Reference to a Contract Offer defining the authorized use of the Resource."@en .
+
+
+###  http://www.semanticweb.org/ontology#Contract_date
+:Contract_date rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Contract ;
+               rdfs:range xsd:dateTimeStamp ;
+               rdfs:comment "Absolute datetime of signing the Contract" .
+
+
+###  http://www.semanticweb.org/ontology#Contract_end
+:Contract_end rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Contract ;
+              rdfs:range xsd:dateTimeStamp ;
+              rdfs:comment "Absolute datetime the Contract is requested, offered or expected to end. If omitted, the contract has to be explicitly terminated by any of the parties." .
+
+
+###  http://www.semanticweb.org/ontology#Contract_start
+:Contract_start rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Contract ;
+                rdfs:range xsd:dateTimeStamp ;
+                rdfs:comment "Absolute datetime the Contract is requested, offered or expected to start, depending on the type of Contract." .
+
+
+###  http://www.semanticweb.org/ontology#CorporateEmailAddress
+:CorporateEmailAddress rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Participant ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Email Address of the Participant" .
+
+
+###  http://www.semanticweb.org/ontology#CorporateHomepage
+:CorporateHomepage rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Participant ;
+                   rdfs:range xsd:anyURI ;
+                   rdfs:comment "Homepage of the Participant" .
+
+
+###  http://www.semanticweb.org/ontology#Country
+:Country rdf:type owl:DatatypeProperty ;
+         rdfs:domain :PostalAddress ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Country" .
+
+
+###  http://www.semanticweb.org/ontology#Data_Portfolio_Document
+:Data_Portfolio_Document rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :DataPortfolio ;
+                         rdfs:range xsd:anyURI ;
+                         rdfs:comment "document describing the Portfolio." .
+
+
+###  http://www.semanticweb.org/ontology#Data_Resource_Id
+:Data_Resource_Id rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :DataResource ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "A unique identifier of data resource" .
+
+
+###  http://www.semanticweb.org/ontology#Data_Resource_Name
+:Data_Resource_Name rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :DataResource ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "A name given to the data resource"@en .
+
+
+###  http://www.semanticweb.org/ontology#Data_resource_version
+:Data_resource_version rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :DataResource ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Version of the data resource"@en .
+
+
+###  http://www.semanticweb.org/ontology#Dataset_Description
+:Dataset_Description rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Dataset ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Description of the Dataset" .
+
+
+###  http://www.semanticweb.org/ontology#Dataset_Id
+:Dataset_Id rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Dataset ;
+            rdfs:range xsd:uuid ;
+            rdfs:comment "Unique identifier of the dataset" .
+
+
+###  http://www.semanticweb.org/ontology#Dataset_Id_of_product
+:Dataset_Id_of_product rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :UserData ;
+                       rdfs:range xsd:uuid ;
+                       rdfs:comment "Unique identifier of the dataset to which user datum belongs to"@en .
+
+
+###  http://www.semanticweb.org/ontology#Dataset_Name
+:Dataset_Name rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Dataset ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Name of the dataset" .
+
+
+###  http://www.semanticweb.org/ontology#Dataset_Name_of_product
+:Dataset_Name_of_product rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :UserData ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Name of dataset to which the user datum belongs"@en .
+
+
+###  http://www.semanticweb.org/ontology#Dataset_Source
+:Dataset_Source rdf:type owl:DatatypeProperty ;
+                rdfs:domain :UserData ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Dataset source of the user datum"@en .
+
+
+###  http://www.semanticweb.org/ontology#Delivery_address
+:Delivery_address rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :PostalAddress ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "building/apartment/suite number and the street name" .
+
+
+###  http://www.semanticweb.org/ontology#Deployment_option
+:Deployment_option rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Application ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Description of relevant deployment" .
+
+
+###  http://www.semanticweb.org/ontology#DestinE_Platform_User_Type
+:DestinE_Platform_User_Type rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Person ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Standard User, Service Provider, Administrator, Federated User" .
+
+
+###  http://www.semanticweb.org/ontology#Documentation_Uri
+:Documentation_Uri rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ServiceInterface ;
+                   rdfs:range xsd:anyURI ;
+                   rdfs:comment "available documentation after onboarding"@en .
+
+
+###  http://www.semanticweb.org/ontology#Encrypted
+:Encrypted rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Storage ;
+           rdfs:range xsd:boolean ;
+           rdfs:comment "Flag relevant to the encryption of the storage" .
+
+
+###  http://www.semanticweb.org/ontology#Encrypted_Password
+:Encrypted_Password rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Person ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Hashed password chosen by a Person" .
+
+
+###  http://www.semanticweb.org/ontology#EndTime
+:EndTime rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Action ;
+         rdfs:range xsd:dateTime ;
+         rdfs:comment "The end time of an action." .
+
+
+###  http://www.semanticweb.org/ontology#Error
+:Error rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Action ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Descriptive information on the cause of the failure (optional, for failed actions)" .
+
+
+###  http://www.semanticweb.org/ontology#Event_Type
+:Event_Type rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Event ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Type of Event" .
+
+
+###  http://www.semanticweb.org/ontology#Event_service_Id
+:Event_service_Id rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Event ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Unique identifier of the DestinE Platform Service where the event occurred" .
+
+
+###  http://www.semanticweb.org/ontology#Event_timestamp
+:Event_timestamp rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Event ;
+                 rdfs:range xsd:dateTimeStamp ;
+                 rdfs:comment "returns the time at which the event was created." .
+
+
+###  http://www.semanticweb.org/ontology#Existing_Documentation
+:Existing_Documentation rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :ServiceInterface ;
+                        rdfs:range xsd:anyURI ;
+                        rdfs:comment "link/upload"@en .
+
+
+###  http://www.semanticweb.org/ontology#Existing_Material
+:Existing_Material rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ServiceInterface ;
+                   rdfs:range xsd:anyURI ;
+                   rdfs:comment "Instance/Demo/Video (link)"@en .
+
+
+###  http://www.semanticweb.org/ontology#Feedback_Comment
+:Feedback_Comment rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Feedback ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Possible comment of the user when assigning a rate" .
+
+
+###  http://www.semanticweb.org/ontology#Format
+:Format rdf:type owl:DatatypeProperty ;
+        rdfs:domain :DataResource ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Data resource format"@en .
+
+
+###  http://www.semanticweb.org/ontology#Geometry
+:Geometry rdf:type owl:DatatypeProperty ;
+          rdfs:domain :UserData ;
+          rdfs:range xsd:GeoJson ;
+          rdfs:comment "Geometry"@en .
+
+
+###  http://www.semanticweb.org/ontology#Hardened
+:Hardened rdf:type owl:DatatypeProperty ;
+          rdfs:domain :ComputingInstances ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Flag relevant to hardening process of securing a system by reducing its surface of vulnerability" .
+
+
+###  http://www.semanticweb.org/ontology#Hpc_Id
+:Hpc_Id rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Hpc ;
+        rdfs:range xsd:string ;
+        rdfs:comment "HPC Identifier" .
+
+
+###  http://www.semanticweb.org/ontology#Integrations
+:Integrations rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ServiceInterface ;
+              rdfs:range xsd:string ;
+              rdfs:comment "list of integrations with Platform Services"@en .
+
+
+###  http://www.semanticweb.org/ontology#Interface_Type
+:Interface_Type rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ServiceInterface ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Endpoint archetype (example: GUI, API, etc)"@en .
+
+
+###  http://www.semanticweb.org/ontology#Interface_Uri
+:Interface_Uri rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ServiceInterface ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "Http link to Interface root path, Depending on Service Provider Infrastructure Integration (runtime/on-premise)"@en .
+
+
+###  http://www.semanticweb.org/ontology#Issue_Assignee
+:Issue_Assignee rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Issue ;
+                rdfs:range xsd:string ;
+                rdfs:comment "person who has the responsibility to resolve the issue, or the person who needs to take the next action." .
+
+
+###  http://www.semanticweb.org/ontology#Issue_Creation_Date
+:Issue_Creation_Date rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Issue ;
+                     rdfs:range xsd:dateTimeStamp ;
+                     rdfs:comment "indicates the date of the event and it is automatically filled by Jira system corresponding to the date in which the issue is opened" .
+
+
+###  http://www.semanticweb.org/ontology#Issue_Description
+:Issue_Description rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Issue ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Problem description" .
+
+
+###  http://www.semanticweb.org/ontology#Issue_Relevance
+:Issue_Relevance rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Issue ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Routine, Outstanding. The value in this field represents the urgency of resolution from a user prospectiv" .
+
+
+###  http://www.semanticweb.org/ontology#Issue_Reporter
+:Issue_Reporter rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Issue ;
+                rdfs:range xsd:string ;
+                rdfs:comment "person who raises issue" .
+
+
+###  http://www.semanticweb.org/ontology#Issue_type
+:Issue_type rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Issue ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Anomaly; User Request; Operational Anomaly; Story; SPR; Maintenance Request; Security Incident; Change Request." .
+
+
+###  http://www.semanticweb.org/ontology#Keywords
+:Keywords rdf:type owl:DatatypeProperty ;
+          rdfs:domain :DestinE_Platform_Service ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Service Provider to describe the Service"@en .
+
+
+###  http://www.semanticweb.org/ontology#Kpi_Id
+:Kpi_Id rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Kpi ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Identifier of the KPI" .
+
+
+###  http://www.semanticweb.org/ontology#Kpi_service_Id
+:Kpi_service_Id rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Kpi ;
+                rdfs:range xsd:uuid ;
+                rdfs:comment "Unique identifier of the DestinE Platform service on which the KPI was measured" .
+
+
+###  http://www.semanticweb.org/ontology#Kpi_type
+:Kpi_type rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Kpi ;
+          rdfs:range xsd:string ;
+          rdfs:comment "KPI type" .
+
+
+###  http://www.semanticweb.org/ontology#Language
+:Language rdf:type owl:DatatypeProperty ;
+          rdfs:domain :DataResource ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Language of the item"@en .
+
+
+###  http://www.semanticweb.org/ontology#LegalName
+:LegalName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Participant ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The complete legal name of a Participant. Unlike the title property for the participant which refers to the commonly used name or term for the Participant, a legal name identifies a participant for legal, administrative and other official purposes." .
+
+
+###  http://www.semanticweb.org/ontology#License
+:License rdf:type owl:DatatypeProperty ;
+         rdfs:domain :DataResource ;
+         rdfs:range xsd:anyURI ;
+         rdfs:comment "Reference to a legal document under which the resource is made available"@en .
+
+
+###  http://www.semanticweb.org/ontology#Main_contact_address
+:Main_contact_address rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :DestinE_Platform_Service ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Contact email for information requests about the Service"@en .
+
+
+###  http://www.semanticweb.org/ontology#Network_Service_Name
+:Network_Service_Name rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :NetworkServices ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Name of the network service" .
+
+
+###  http://www.semanticweb.org/ontology#Orchestrator_Engine
+:Orchestrator_Engine rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :RuntimePlatform ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Engine orchestrator description" .
+
+
+###  http://www.semanticweb.org/ontology#Orchestrator_Ip
+:Orchestrator_Ip rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :RuntimePlatform ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Orchestrator IP" .
+
+
+###  http://www.semanticweb.org/ontology#Orchestrator_Name
+:Orchestrator_Name rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :RuntimePlatform ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Name of the orchestrator" .
+
+
+###  http://www.semanticweb.org/ontology#Orchestrator_System
+:Orchestrator_System rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :RuntimePlatform ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Orchestrator system" .
+
+
+###  http://www.semanticweb.org/ontology#Organization
+:Organization rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Person ;
+              rdfs:range xsd:string ;
+              rdfs:comment "An organization that this person is affiliated with." .
+
+
+###  http://www.semanticweb.org/ontology#Organization_name
+:Organization_name rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :DestinE_Platform_Service ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Service Provider organization name"@en .
+
+
+###  http://www.semanticweb.org/ontology#Organization_type
+:Organization_type rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :DestinE_Platform_Service ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Service provider organization type (Industry, Research Institute, Public Organization, Scientific Organization)"@en .
+
+
+###  http://www.semanticweb.org/ontology#Original_Estimation
+:Original_Estimation rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Issue ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "an estimated date for the issue resolution or to mitigate the negative consequence" .
+
+
+###  http://www.semanticweb.org/ontology#Participant_Id
+:Participant_Id rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Participant ;
+                rdfs:range xsd:uuid ;
+                rdfs:comment "Participant unique identifier" .
+
+
+###  http://www.semanticweb.org/ontology#Participant_provenance
+:Participant_provenance rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :DataResource ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Participants that are responsible of trace the Content Provenance"@en .
+
+
+###  http://www.semanticweb.org/ontology#Person_Id
+:Person_Id rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Person ;
+           rdfs:range xsd:uuid ;
+           rdfs:comment "Person unique identifier" .
+
+
+###  http://www.semanticweb.org/ontology#Person_Name
+:Person_Name rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Person ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Name of the Person" .
+
+
+###  http://www.semanticweb.org/ontology#Person_Surname
+:Person_Surname rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Person ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Surname of the Person" .
+
+
+###  http://www.semanticweb.org/ontology#Person_Username
+:Person_Username rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Person ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Username of the Person" .
+
+
+###  http://www.semanticweb.org/ontology#Policy_of_Service_Url
+:Policy_of_Service_Url rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Client ;
+                       rdfs:range xsd:anyURI ;
+                       rdfs:comment "URL that the Service Client provides to end-users to read about the how the profile data will be used" .
+
+
+###  http://www.semanticweb.org/ontology#Postal_Code
+:Postal_Code rdf:type owl:DatatypeProperty ;
+             rdfs:domain :PostalAddress ;
+             rdfs:range xsd:string ;
+             rdfs:comment "ZIP code" .
+
+
+###  http://www.semanticweb.org/ontology#Priority
+:Priority rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Issue ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Blocking; Critical; Normal" .
+
+
+###  http://www.semanticweb.org/ontology#Product_Id
+:Product_Id rdf:type owl:DatatypeProperty ;
+            rdfs:domain :UserData ;
+            rdfs:range xsd:uuid ;
+            rdfs:comment "Unique identifier of a user datum"@en .
+
+
+###  http://www.semanticweb.org/ontology#Product_Name
+:Product_Name rdf:type owl:DatatypeProperty ;
+              rdfs:domain :UserData ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Name of the user datum"@en .
+
+
+###  http://www.semanticweb.org/ontology#Province
+:Province rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PostalAddress ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Province, i.e., specific location within a country" .
+
+
+###  http://www.semanticweb.org/ontology#Public_statistics
+:Public_statistics rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Statistics ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:comment "Flag stating if the statistic is publicly exposed to users" .
+
+
+###  http://www.semanticweb.org/ontology#PublicationDate
+:PublicationDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :UserData ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Date of formal issuance (e.g., publication) of the user datum."@en .
+
+
+###  http://www.semanticweb.org/ontology#Rating
+:Rating rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Feedback ;
+        rdfs:range xsd:integer ;
+        rdfs:comment "Vote from 1 to 5" .
+
+
+###  http://www.semanticweb.org/ontology#Replicas_Number
+:Replicas_Number rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :ContainerServices ;
+                 rdfs:range xsd:integer ;
+                 rdfs:comment "Number of identical instances" .
+
+
+###  http://www.semanticweb.org/ontology#Report_Id
+:Report_Id rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Report ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Identifier of the report" .
+
+
+###  http://www.semanticweb.org/ontology#Report_of_Event_type
+:Report_of_Event_type rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Report ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Report relevant to a specific event type" .
+
+
+###  http://www.semanticweb.org/ontology#Report_service_Id
+:Report_service_Id rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Report ;
+                   rdfs:range xsd:uuid ;
+                   rdfs:comment "Unique identifier of the DestinE Platform service relevant to the statistics at the basis of the report" .
+
+
+###  http://www.semanticweb.org/ontology#Resource_Id
+:Resource_Id rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Resource ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Identifier of a resource"@en .
+
+
+###  http://www.semanticweb.org/ontology#Revision_Date
+:Revision_Date rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ServiceInterface ;
+               rdfs:range xsd:dateTimeStamp ;
+               rdfs:comment "Board Approval date of the Onboarding or Service Update"@en .
+
+
+###  http://www.semanticweb.org/ontology#Role_Description
+:Role_Description rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ClientRole ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Description of the client role" .
+
+
+###  http://www.semanticweb.org/ontology#Role_Name
+:Role_Name rdf:type owl:DatatypeProperty ;
+           rdfs:domain :ClientRole ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Name identifying the client role" .
+
+
+###  http://www.semanticweb.org/ontology#Service_Description
+:Service_Description rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :DestinE_Platform_Service ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Description of Service functions and goals."@en .
+
+
+###  http://www.semanticweb.org/ontology#Service_Desk_email_address
+:Service_Desk_email_address rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :ServiceDesk ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Contact point of Service Desk" .
+
+
+###  http://www.semanticweb.org/ontology#Service_Gallery
+:Service_Gallery rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :DestinE_Platform_Service ;
+                 rdfs:range xsd:anyURI ;
+                 rdfs:comment "Representative Images/Videos of Service Features, These images will be visible in the Service Detail Page of the Service Registry"@en .
+
+
+###  http://www.semanticweb.org/ontology#Service_Id
+:Service_Id rdf:type owl:DatatypeProperty ;
+            rdfs:domain :DestinE_Platform_Service ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Identifier of a resource"@en .
+
+
+###  http://www.semanticweb.org/ontology#Service_Name
+:Service_Name rdf:type owl:DatatypeProperty ;
+              rdfs:domain :DestinE_Platform_Service ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Name of the service"@en .
+
+
+###  http://www.semanticweb.org/ontology#Service_Onboarding_Approval_Date
+:Service_Onboarding_Approval_Date rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain :OnboardedService ;
+                                  rdfs:range xsd:dateTimeStamp ;
+                                  rdfs:comment "Board Approval date of the Onboarding or Service Update"@en .
+
+
+###  http://www.semanticweb.org/ontology#Service_Type
+:Service_Type rdf:type owl:DatatypeProperty ;
+              rdfs:domain :DestinE_Platform_Service ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Platform Management Service, Data Management Service, Onboarded Service, Federated Service"@en .
+
+
+###  http://www.semanticweb.org/ontology#Service_issue_date
+:Service_issue_date rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :DestinE_Platform_Service ;
+                    rdfs:range xsd:dateTimeStamp ;
+                    rdfs:comment "Issue date of the service"@en .
+
+
+###  http://www.semanticweb.org/ontology#Service_version
+:Service_version rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :DestinE_Platform_Service ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Version of the service"@en .
+
+
+###  http://www.semanticweb.org/ontology#Size
+:Size rdf:type owl:DatatypeProperty ;
+      rdfs:domain :UserData ;
+      rdfs:range xsd:integer ;
+      rdfs:comment "Size of the user datum"@en .
+
+
+###  http://www.semanticweb.org/ontology#Software_Name
+:Software_Name rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ServiceInterface ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Name of the software"@en .
+
+
+###  http://www.semanticweb.org/ontology#Software_Version
+:Software_Version rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ServiceInterface ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Version of the software"@en .
+
+
+###  http://www.semanticweb.org/ontology#Spatial_Coverage
+:Spatial_Coverage rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :UserData ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Spatial coverage"@en .
+
+
+###  http://www.semanticweb.org/ontology#StartTime
+:StartTime rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Action ;
+           rdfs:range xsd:dateTime ;
+           rdfs:comment "The start time of an action." .
+
+
+###  http://www.semanticweb.org/ontology#Statistic_Name
+:Statistic_Name rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Statistics ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Name of the statistic" .
+
+
+###  http://www.semanticweb.org/ontology#Storage_Bandwidth
+:Storage_Bandwidth rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Storage ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Bandwidth of the storage" .
+
+
+###  http://www.semanticweb.org/ontology#Storage_Performance
+:Storage_Performance rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Storage ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Performance of the storage" .
+
+
+###  http://www.semanticweb.org/ontology#Storage_Size
+:Storage_Size rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Storage ;
+              rdfs:range xsd:float ;
+              rdfs:comment "Size of the storage" .
+
+
+###  http://www.semanticweb.org/ontology#Storage_Technology
+:Storage_Technology rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Storage ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Technology of the storage" .
+
+
+###  http://www.semanticweb.org/ontology#Storage_Type
+:Storage_Type rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Storage ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Type of the storage" .
+
+
+###  http://www.semanticweb.org/ontology#Storage_Volume
+:Storage_Volume rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Storage ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Volume of the storage" .
+
+
+###  http://www.semanticweb.org/ontology#Summary
+:Summary rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Issue ;
+         rdfs:range xsd:string ;
+         rdfs:comment "summary of the issue" .
+
+
+###  http://www.semanticweb.org/ontology#Tags
+:Tags rdf:type owl:DatatypeProperty ;
+      rdfs:domain :DestinE_Platform_Service ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Internal Service Classification, these words will be used for the Service discovery"@en .
+
+
+###  http://www.semanticweb.org/ontology#Target_EntryPoint
+:Target_EntryPoint rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Action ;
+                   rdfs:range xsd:anyURI ;
+                   rdfs:comment "An entrypoint used to execute the action." .
+
+
+###  http://www.semanticweb.org/ontology#Technical_Contact_Point
+:Technical_Contact_Point rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :ServiceInterface ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Address for information requests about the Interface"@en .
+
+
+###  http://www.semanticweb.org/ontology#Terms_of_Service_Url
+:Terms_of_Service_Url rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Client ;
+                      rdfs:range xsd:anyURI ;
+                      rdfs:comment "URL that the Service Client provides to end-users to read about the Participant's terms of service" .
+
+
+###  http://www.semanticweb.org/ontology#Thumbnail
+:Thumbnail rdf:type owl:DatatypeProperty ;
+           rdfs:domain :DestinE_Platform_Service ;
+           rdfs:range xsd:anyURI ;
+           rdfs:comment "Representative Image of the Service, this will present the Service in the Service discovery list"@en .
+
+
+###  http://www.semanticweb.org/ontology#Ticketing_System_Name
+:Ticketing_System_Name rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :TicketingSystem ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Ticketing system name" .
+
+
+###  http://www.semanticweb.org/ontology#Ticketing_System_Project_Name
+:Ticketing_System_Project_Name rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :TicketingSystemProject ;
+                               rdfs:range xsd:string ;
+                               rdfs:comment "Ticketing system project name" .
+
+
+###  http://www.semanticweb.org/ontology#Ticketing_system_Project_website_address
+:Ticketing_system_Project_website_address rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain :TicketingSystemProject ;
+                                          rdfs:range xsd:anyURI ;
+                                          rdfs:comment "Website address of ticketing system project" .
+
+
+###  http://www.semanticweb.org/ontology#Ticketing_system_website_address
+:Ticketing_system_website_address rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain :TicketingSystem ;
+                                  rdfs:range xsd:anyURI ;
+                                  rdfs:comment "Website address of ticketing system" .
+
+
+###  http://www.semanticweb.org/ontology#Time_Coverage_End
+:Time_Coverage_End rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :UserData ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:comment "Time coverage end"@en .
+
+
+###  http://www.semanticweb.org/ontology#Time_Coverage_Start
+:Time_Coverage_Start rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :UserData ;
+                     rdfs:range xsd:dateTime ;
+                     rdfs:comment "Time coverage start"@en .
+
+
+###  http://www.semanticweb.org/ontology#Time_to_first_response
+:Time_to_first_response rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Issue ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "it corresponds to the time elapsed from the issue creation and the moment in which the first automatic response is sent to the user and the issue is updated in RECEIVED status" .
+
+
+###  http://www.semanticweb.org/ontology#Time_to_resolution
+:Time_to_resolution rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Issue ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "It corresponds to the time elapsed form when the issue is put in TO DO status to its resolution and closure. The time spent in ON GOING status shell be deduct form the count." .
+
+
+###  http://www.semanticweb.org/ontology#Timeline
+:Timeline rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Report ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Daily, weekly, monthly, annually, defined period" .
+
+
+###  http://www.semanticweb.org/ontology#Transaction_Id
+:Transaction_Id rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Transaction ;
+                rdfs:range xsd:string ;
+                rdfs:comment "identifier of the transaction" .
+
+
+###  http://www.semanticweb.org/ontology#User_Support_Category
+:User_Support_Category rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :UserSupport ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Ticket category a user can choose" .
+
+
+###  http://www.semanticweb.org/ontology#User_Support_Description
+:User_Support_Description rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :UserSupport ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Ticket description provided by users" .
+
+
+###  http://www.semanticweb.org/ontology#User_Support_Relevance
+:User_Support_Relevance rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :UserSupport ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Field where users set the severity of the issue according to their feeling" .
+
+
+###  http://www.semanticweb.org/ontology#User_Support_Title
+:User_Support_Title rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :UserSupport ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Ticket tile assigned by users" .
+
+
+###  http://www.semanticweb.org/ontology#User_email
+:User_email rdf:type owl:DatatypeProperty ;
+            rdfs:domain :UserSupport ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Email of the user who raise the request" .
+
+
+###  http://www.semanticweb.org/ontology#ai_Service_Memory
+:ai_Service_Memory rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Data_And_Ai ;
+                   rdfs:range xsd:integer ;
+                   rdfs:comment "Amount of memory allocated for running an AI service or application" .
+
+
+###  http://www.semanticweb.org/ontology#ai_Service_Name
+:ai_Service_Name rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Data_And_Ai ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Name of the AI service" .
+
+
+###  http://www.semanticweb.org/ontology#ai_Service_Public_Network_description
+:ai_Service_Public_Network_description rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain :Data_And_Ai ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:comment "AI service that is accessible via a public network" .
+
+
+###  http://www.semanticweb.org/ontology#ai_Service_Storage
+:ai_Service_Storage rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Data_And_Ai ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Storage requirements for an AI service or application" .
+
+
+###  http://www.semanticweb.org/ontology#ai_Service_vcore
+:ai_Service_vcore rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Data_And_Ai ;
+                  rdfs:range xsd:integer ;
+                  rdfs:comment "Core of the AI Service" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ontology#Action
+:Action rdf:type owl:Class ;
+        rdfs:comment "An operation that can be exercised on a Resource." .
+
+
+###  http://www.semanticweb.org/ontology#Application
+:Application rdf:type owl:Class ;
+             rdfs:subClassOf :Resource ;
+             rdfs:comment "software package, library or algorithm that performs a specific function, that can be installed within the infrastructure to communicate or process data on behalf of the Participants." .
+
+
+###  http://www.semanticweb.org/ontology#ClearingHouse
+:ClearingHouse rdf:type owl:Class ;
+               rdfs:subClassOf :DestinE_Platform_Service ;
+               rdfs:comment "Platform Management Service dedicated to the storing of the transactions received by each DestinE Platform Service." .
+
+
+###  http://www.semanticweb.org/ontology#Client
+:Client rdf:type owl:Class ;
+        rdfs:comment "entities that request IAM Service to authenticate and secure themselves" .
+
+
+###  http://www.semanticweb.org/ontology#ClientRole
+:ClientRole rdf:type owl:Class ;
+            rdfs:comment "Role that a client can define." .
+
+
+###  http://www.semanticweb.org/ontology#CloudResource
+:CloudResource rdf:type owl:Class ;
+               rdfs:subClassOf :Resource ;
+               rdfs:comment "Any computing resource or service that is hosted in a cloud computing environment. Cloud resources can include virtual machines, storage, databases, networking components, software applications, development platforms, and other IT infrastructure and services that are provided and accessed over the internet via cloud computing providers." .
+
+
+###  http://www.semanticweb.org/ontology#ComputingInstances
+:ComputingInstances rdf:type owl:Class ;
+                    rdfs:subClassOf :CloudResource ;
+                    rdfs:comment "virtualized computing resources provisioned by cloud service provider to users for running applications, workloads, or services in the cloud. These instances are typically virtual machines (VMs), allowing users to access and utilize computing resources on-demand via the internet." .
+
+
+###  http://www.semanticweb.org/ontology#ContainerServices
+:ContainerServices rdf:type owl:Class ;
+                   rdfs:subClassOf :CloudResource ;
+                   rdfs:comment "cloud computing services that facilitate the deployment, management, and scaling of containerized applications in a cloud environment" .
+
+
+###  http://www.semanticweb.org/ontology#Contract
+:Contract rdf:type owl:Class ;
+          rdfs:comment "Abstract set of rules governing the usage of a Resource." .
+
+
+###  http://www.semanticweb.org/ontology#DataCollection
+:DataCollection rdf:type owl:Class ;
+                rdfs:subClassOf :DataResource ;
+                rdfs:comment "A subset of the User Data offer belonging to a specific provider, organisation, or programme (e.g., ESA Copernicus Collection, ECMWF CAMs Collection, NASA Modis data)." .
+
+
+###  http://www.semanticweb.org/ontology#DataPortfolio
+:DataPortfolio rdf:type owl:Class ;
+               rdfs:comment "Repository for all information relevant to data of an organization." .
+
+
+###  http://www.semanticweb.org/ontology#DataResource
+:DataResource rdf:type owl:Class ;
+              rdfs:subClassOf :Resource ;
+              rdfs:comment "identifiable, valuable, digital (non-physical) commodity exchanged among Participants by means of DestinE Platform Services" .
+
+
+###  http://www.semanticweb.org/ontology#Data_And_Ai
+:Data_And_Ai rdf:type owl:Class ;
+             rdfs:subClassOf :CloudResource ;
+             rdfs:comment "enable to store, manage, analyze, and derive insights from large volumes of data using artificial intelligence (AI) and machine learning (ML) techniques." .
+
+
+###  http://www.semanticweb.org/ontology#Dataset
+:Dataset rdf:type owl:Class ;
+         rdfs:subClassOf :DataResource ;
+         rdfs:comment "A subset of a collection that can be defined according to ad-hoc criteria (e.g., all User Data from a Sentinel mission, all User Data corresponding to a specific product level, information from a given Copernicus Service or Contributing Mission, a multi-satellite coverage, etc.)" .
+
+
+###  http://www.semanticweb.org/ontology#DestinE_Platform_Service
+:DestinE_Platform_Service rdf:type owl:Class ;
+                          rdfs:subClassOf :Resource ;
+                          rdfs:comment "Class of all the DestinE Platform services, implementing a specific function operated by a Service Provider based on a service-level agreement." .
+
+
+###  http://www.semanticweb.org/ontology#Duty
+:Duty rdf:type owl:Class ;
+      rdfs:subClassOf :Rule ;
+      rdfs:comment "The obligation to exercise an Action." .
+
+
+###  http://www.semanticweb.org/ontology#Event
+:Event rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty :extracted_from_CloudResource ;
+                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                             owl:onClass :CloudResource
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :extracted_from_Runtime ;
+                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                             owl:onClass :RuntimePlatform
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :extracted_from_CloudResource ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :CloudResource
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :extracted_from_Runtime ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :RuntimePlatform
+                           ] ;
+       rdfs:comment "any occurrence that is relevant to a service, of interest for monitoring purposes." .
+
+
+###  http://www.semanticweb.org/ontology#Feedback
+:Feedback rdf:type owl:Class ;
+          rdfs:comment "evaluation provided by users on services capabilities and potencial action items, or ticket resolution." .
+
+
+###  http://www.semanticweb.org/ontology#Hpc
+:Hpc rdf:type owl:Class ;
+     rdfs:comment "High-Performance Computing solutions." .
+
+
+###  http://www.semanticweb.org/ontology#Iam_Service
+:Iam_Service rdf:type owl:Class ;
+             rdfs:subClassOf :DestinE_Platform_Service ;
+             rdfs:comment "unified DestinE Platform user management service, granting access to all authorised  Registered Services based on the same digital identity" .
+
+
+###  http://www.semanticweb.org/ontology#Issue
+:Issue rdf:type owl:Class ;
+       rdfs:comment "Record within a ticketing system raised by DestinE Platform stakeholders." .
+
+
+###  http://www.semanticweb.org/ontology#Kpi
+:Kpi rdf:type owl:Class ;
+     rdfs:comment "key performance indicator, i.e., a quantifiable measure of performance over time for a specific objective." .
+
+
+###  http://www.semanticweb.org/ontology#MonitoringService
+:MonitoringService rdf:type owl:Class ;
+                   rdfs:subClassOf :DestinE_Platform_Service ;
+                   rdfs:comment "Service Operations Monitoring Dashboard Service allows real-time monitoring of DestinE Platform operations and performance." .
+
+
+###  http://www.semanticweb.org/ontology#NetworkServices
+:NetworkServices rdf:type owl:Class ;
+                 rdfs:subClassOf :CloudResource ;
+                 rdfs:comment "a set of networking capabilities and services provided by cloud computing providers to enable connectivity, communication, and security within cloud environments." .
+
+
+###  http://www.semanticweb.org/ontology#OnboardedService
+:OnboardedService rdf:type owl:Class ;
+                  rdfs:subClassOf :DestinE_Platform_Service ;
+                  rdfs:comment "Class of Services become part of DestinE Platform ecosystem after successfully completing the Onboarding Procedure." .
+
+
+###  http://www.semanticweb.org/ontology#Participant
+:Participant rdf:type owl:Class ;
+             rdfs:comment "Legal or natural persons (stakeholders) that interact using the Destine Platform, at undertake Roles adhering to formal Regulations." .
+
+
+###  http://www.semanticweb.org/ontology#Permission
+:Permission rdf:type owl:Class ;
+            rdfs:subClassOf :Rule ;
+            rdfs:comment "The ability to exercise an Action over an Resource. The Permission MAY also have the duty property that expresses an agreed Action that MUST be exercised (as a pre-condition to be granted the Permission)" .
+
+
+###  http://www.semanticweb.org/ontology#Person
+:Person rdf:type owl:Class ;
+        rdfs:comment "The class of persons (people). Every Person is given a unique identity by the IAM Service." .
+
+
+###  http://www.semanticweb.org/ontology#PostalAddress
+:PostalAddress rdf:type owl:Class ;
+               rdfs:comment "Class for postal addresses." .
+
+
+###  http://www.semanticweb.org/ontology#Prohibition
+:Prohibition rdf:type owl:Class ;
+             rdfs:subClassOf :Rule ;
+             rdfs:comment "The inability to exercise an Action over a Resource." .
+
+
+###  http://www.semanticweb.org/ontology#Report
+:Report rdf:type owl:Class ;
+        rdfs:comment "document presenting information in a specific format for a specific audience and purpose." .
+
+
+###  http://www.semanticweb.org/ontology#Resource
+:Resource rdf:type owl:Class ;
+          rdfs:comment "Abstract Class of Resources, covering what can be provided and/or consumed in the framework of DestinE Platform." .
+
+
+###  http://www.semanticweb.org/ontology#Rule
+:Rule rdf:type owl:Class ;
+      rdfs:comment "Superclass of Permissions, Prohibitions and Duties." .
+
+
+###  http://www.semanticweb.org/ontology#RuntimePlatform
+:RuntimePlatform rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hosts ;
+                                       owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :DestinE_Platform_Service
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hosts ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :DestinE_Platform_Service
+                                     ] ;
+                 rdfs:comment "common layer available for the deployment and operation of all the DestinE Platform services – depending on their type and agreed integration." .
+
+
+###  http://www.semanticweb.org/ontology#ServiceDesk
+:ServiceDesk rdf:type owl:Class ;
+             rdfs:subClassOf :DestinE_Platform_Service ;
+             rdfs:comment "Service reponsible of DestinE Platform ticketing system; and user feedbacks analysis and reporting." .
+
+
+###  http://www.semanticweb.org/ontology#ServiceInterface
+:ServiceInterface rdf:type owl:Class ;
+                  rdfs:comment "Class of interfaces that constitute a Service (Core or Onboarded)" .
+
+
+###  http://www.semanticweb.org/ontology#ServiceRegistry
+:ServiceRegistry rdf:type owl:Class ;
+                 rdfs:subClassOf :DestinE_Platform_Service ;
+                 rdfs:comment "catalogues applications and services integrated in DestinE Platform." .
+
+
+###  http://www.semanticweb.org/ontology#Statistics
+:Statistics rdf:type owl:Class ;
+            rdfs:comment "aggregation of events." .
+
+
+###  http://www.semanticweb.org/ontology#Storage
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf :CloudResource ;
+         rdfs:comment "a type of data storage provided by cloud computing providers over the internet. It allows users to store and manage data resource." .
+
+
+###  http://www.semanticweb.org/ontology#TicketingSystem
+:TicketingSystem rdf:type owl:Class ;
+                 rdfs:comment "used to process, manage and track issues from submission to resolution." .
+
+
+###  http://www.semanticweb.org/ontology#TicketingSystemProject
+:TicketingSystemProject rdf:type owl:Class ;
+                        rdfs:comment "collection of issues in the Ticketing System." .
+
+
+###  http://www.semanticweb.org/ontology#Transaction
+:Transaction rdf:type owl:Class ;
+             rdfs:comment "a completed event, that can be allowed by a Service." .
+
+
+###  http://www.semanticweb.org/ontology#UserData
+:UserData rdf:type owl:Class ;
+          rdfs:subClassOf :DataResource ;
+          rdfs:comment """any data constituting a Dataset.
+User Data are subject to forwarding, processing, or consumption.""" .
+
+
+###  http://www.semanticweb.org/ontology#UserGeneratedData
+:UserGeneratedData rdf:type owl:Class ;
+                   rdfs:subClassOf :DataResource ;
+                   rdfs:comment "Data generated or provided by users to the DestinE Platform Ecosystem." .
+
+
+###  http://www.semanticweb.org/ontology#UserSupport
+:UserSupport rdf:type owl:Class ;
+             rdfs:comment "request raised by a user to ask support." .
+
+
+###  http://www.semanticweb.org/ontology#Id_&_Os_Service
+<http://www.semanticweb.org/ontology#Id_&_Os_Service> rdf:type owl:Class ;
+                                                      rdfs:subClassOf :DestinE_Platform_Service ;
+                                                      rdfs:comment "The Information Dissemination and Onboarding Support Service is the entry point for users approaching to DestinE Platform, as well as of the related user experience and community engagement activities." .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

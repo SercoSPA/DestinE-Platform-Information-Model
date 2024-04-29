@@ -1,0 +1,11 @@
+<html>
+<body>
+	<p>The Information Model defines a high-level and domain-agnostic vocabulary of the DESP that constitutes a central agreement shared by its participants and components.</p>
+	<p>The Information Model ensures:</p>
+	<ul>
+		<li>compatibility and interoperability, as its structured, semantic annotation ensures the provision of the most relevant assets to TPUs willing to integrate their service components</li>
+		<li>an automated consumption of offerings via service interface, with known protocol and agreed governance</li>
+		<li>free and open access to the definition of all the classes and properties of the DESP Information Model entities, its participants, infrastructure components and processes, on a documental level</li>
+	</ul>
+</body>
+</html>
